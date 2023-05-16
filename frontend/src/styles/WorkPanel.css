@@ -1,0 +1,12 @@
+.workpanel-content-container {
+	width: 500px;
+	height: 300px;
+	background-color: rgba(19, 10, 22, 1);
+	color: white;
+	transform: rotate3d(0,-1,0,15deg);
+	transition: transform 1s ease;
+}
+
+.workpanel-content-container:hover {
+	transform: rotate3d(0,0,0,10deg) scale(1.5);
+}
