@@ -1,0 +1,8 @@
+.home-global-container {
+	height: calc(100vh - 50px);
+	background-color: rgba(245, 243, 239, 0.1);
+}
+
+.home-global-container h1 {
+	margin: 0;
+}
