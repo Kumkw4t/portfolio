@@ -1,0 +1,137 @@
+[
+	{
+		"id": "",
+		"category": "frontend",
+		"title": "Booki",
+		"cover_img": "",
+		"cover_video": "",
+		"description": "Frontend development of a travel agency frontpage",
+		"tags": [
+			"HTML",
+			"CSS",
+			"School project"
+		],
+		"pictures": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"videos": [
+			"",
+			""
+		],
+		"year" : "2023",
+		"texts": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"url": ""
+	},
+	{
+		"id": "",
+		"category": "frontend",
+		"title": "Kasa",
+		"cover_img": "",
+		"cover_video": "",
+		"description": "Frontend development for a house rental agency website",
+		"tags": [
+			"HTML",
+			"CSS",
+			"React",
+			"School project"
+		],
+		"pictures": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"videos": [
+			"",
+			""
+		],
+		"year" : "2023",
+		"texts": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"url": ""
+	},
+	{
+		"id": "",
+		"category": "backend",
+		"title": "Mon vieux grimoire",
+		"cover_img": "",
+		"cover_video": "",
+		"description": "Backend development for a books rating website",
+		"skills": [
+			"NodeJS",
+			"Express",
+			"MongoDB",
+			"Server security",
+			"School porject"
+		],
+		"pictures": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"videos": [
+			"",
+			""
+		],
+		"year" : "2023",
+		"texts": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"url": ""
+	},
+	{
+		"id": "",
+		"category": "frontend",
+		"title": "Photograph's website",
+		"cover_img": "",
+		"cover_video": "",
+		"description": "Frontend development for a photograph's website",
+		"skills": [
+			"HTML",
+			"CSS",
+			"Responsive"
+		],
+		"pictures": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"videos": [
+			"",
+			""
+		],
+		"year" : "2023",
+		"texts": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"url": ""
+	},
+]

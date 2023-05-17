@@ -12,12 +12,13 @@
 .home-content-container {
 	display: flex;
 	flex-direction: column;
+	max-width: 1220px;
 	padding: 100px 100px 0 200px;
 }
 
 .home-title h1 {
-	font-size: 90px;
-	font-weight: 500;
+	font-size: 60px;
+/*	font-weight: 500;*/
 	margin: 0;
 	margin-bottom: 30px;
 }
@@ -33,7 +34,7 @@
 }
 
 .home-content-text span {
-	font-size: 60px;
+	font-size: 70px;
 	font-weight: 500;
 	background: -webkit-linear-gradient(-45deg,#6bc5f8,#cf59e6,#6bc5f8,#cf59e6);
 	background: linear-gradient(-45deg,#6bc5f8,#cf59e6,#6bc5f8,#cf59e6);
@@ -46,6 +47,7 @@
 }
 
 .home-portrait-container {
+	flex-shrink: 0;
 	transform: translate3d(-200px, -125px, 0);
 	bottom:50px;
 	width: 350px;

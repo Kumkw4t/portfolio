@@ -1,5 +1,6 @@
 import '../styles/Works.css'
 import WorkPanel from '../components/WorkPanel';
+// import workList from '../data/works.json'
 
 function Works () {
 	return(
@@ -12,16 +13,15 @@ function Works () {
 			<div className="workpanel-global-container">
 				<div className="workpanel-grid-filler workpanel-grid-filler-topbot"></div>
 				<div className="workpanel-grid-filler workpanel-grid-filler-topbot"></div>
-				<div className="workpanel-grid-filler"></div>
-				<WorkPanel workId="1" />
-				<WorkPanel workId="2" />
-				<div className="workpanel-grid-filler"></div>
-				<div className="workpanel-grid-filler"></div>
-				<WorkPanel workId="3" />
-				<WorkPanel workId="4" />
-				<div className="workpanel-grid-filler"></div>
-				<div className="workpanel-grid-filler"></div>
-				<WorkPanel workId="5" />
+				<div className="workpanel-grid-filler" ></div>
+				<WorkPanel workId="truc" isEven="true" />
+				<WorkPanel workId="truc" isEven="true" />
+				<div className="workpanel-grid-filler" ></div>
+				<div className="workpanel-grid-filler" ></div>
+				<WorkPanel workId="truc" isEven="true" />
+				<WorkPanel workId="truc" isEven="true" />
+				<div className="workpanel-grid-filler" ></div>
+				<div className="workpanel-grid-filler" ></div>
 				<div className="workpanel-grid-filler workpanel-grid-filler-topbot"></div>
 				<div className="workpanel-grid-filler workpanel-grid-filler-topbot"></div>
 			</div>

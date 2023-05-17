@@ -1,5 +1,5 @@
 import '../styles/Header.css';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 
 import MenuBurger from './MenuBurger'
@@ -7,13 +7,40 @@ import MenuBurger from './MenuBurger'
 function Header () {
 
 	const [menuOpen, setMenuOpen] = useState(true);
- 	const toggleMenu = () => {
+	const [menuUserOpen, setMenuUserOpen] = useState(false);
+
+ 	const userToggleMenu = () => {
+    	setMenuUserOpen(!menuOpen);
     	setMenuOpen(!menuOpen);
   	};
 
+ 	const handleScroll = () => {
+	    const scrollPosition = window.scrollY;
+
+	    if ( scrollPosition > 0 && !menuUserOpen) {
+	    	setMenuOpen(false);
+	    	return;
+	    }
+
+	    if ( scrollPosition === 0 && !menuUserOpen) {
+	    	setMenuOpen(true);
+	    	return;
+	    }
+
+	    return;
+	};
+
+	useEffect(() => {
+	  		window.addEventListener("scroll", handleScroll);
+	  	return () => {
+	    	window.removeEventListener("scroll", handleScroll);
+	  	};
+	 },[]);
+
+
 	return (
 		<div>
-		<MenuBurger menuState={menuOpen} onPress={toggleMenu} />
+		<MenuBurger menuState={menuOpen} onPress={userToggleMenu} />
 		<div className={menuOpen ? "header-wrapper" : "header-wrapper header-hidden-desktop"}>
 			<p className="header-logo mobile">Hi.</p>
 			<nav className="nav-wrapper">
