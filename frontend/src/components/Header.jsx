@@ -1,5 +1,5 @@
 import '../styles/Header.css';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
 import MenuBurger from './MenuBurger'
@@ -7,22 +7,23 @@ import MenuBurger from './MenuBurger'
 function Header () {
 
 	const [menuOpen, setMenuOpen] = useState(true);
-	const [menuUserOpen, setMenuUserOpen] = useState(false);
+	const menuUserOpen = useRef(false);
 
  	const userToggleMenu = () => {
-    	setMenuUserOpen(!menuOpen);
+    	menuUserOpen.current = !menuOpen;
     	setMenuOpen(!menuOpen);
   	};
 
  	const handleScroll = () => {
 	    const scrollPosition = window.scrollY;
+	    console.log(menuUserOpen.current);
 
-	    if ( scrollPosition > 0 && !menuUserOpen) {
+	    if ( scrollPosition > 0 && !(menuUserOpen.current) ) {
 	    	setMenuOpen(false);
 	    	return;
 	    }
 
-	    if ( scrollPosition === 0 && !menuUserOpen) {
+	    if ( scrollPosition === 0 && !(menuUserOpen.current) ) {
 	    	setMenuOpen(true);
 	    	return;
 	    }
@@ -35,7 +36,7 @@ function Header () {
 	  	return () => {
 	    	window.removeEventListener("scroll", handleScroll);
 	  	};
-	 },[]);
+	 });
 
 
 	return (
