@@ -1,47 +1,40 @@
 .works-global-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: stretch;
-	align-items: center;
-	margin: auto;
+	justify-content: center;
 	padding: 100px 0 ;
 	background-color: rgba(234, 230, 236, 1);
 }
 
+.workpanel-global-container:before {
+	left: 50%;
+    content: '';
+    display: block;
+    background-color: rgba(19, 10, 22, 1);
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 24px;
+}
+
 .svg-circle-top {
-	position: relative;
+	position: absolute;
 	width: 25px;
 	height: 25px;
 }
 
 .svg-circle-top svg {
 	position: absolute;
+	left: 1px;
 	width: 100%;
 	height: 100%;
 }
 
 .workpanel-global-container {
-	padding: 150px 0;
-	width: 1400px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	width: 1200px;
+	position: relative;
+	list-style: none;
+	padding: 0 0 200px 0;
+	margin: 0;
+
 }
 
-.work-container-child {
-	width: 50%;
-}
-
-.work-year-container {
-	display: flex;
-	align-items: center;
-}
-
-.work-year-container-even {
-	padding-left: 30%;
-	justify-content: flex-start;
-}
-
-.work-year-container-odd {
-	justify-content: flex-end;
-}

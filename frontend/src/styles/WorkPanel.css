@@ -1,28 +1,111 @@
-.workpanel-root-container {
+.workpanel-root-case {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	perspective: 1000px;
-	flex-grow: 2;
+	flex-direction: column;
 }
 
-.workpanel-content-container {
+.workpanel-content-case {
 	width: 500px;
 	height: 300px;
 	background-color: rgba(19, 10, 22, 1);
 	color: white;
+	position: relative;
 }
 
-.workpanel-content-container:hover {
-	transform: rotate3d(0,0,0,10deg) scale(1.6);
+.workpanel-content-perspective {
+	perspective: 1000px;
+	z-index: 1;
 }
 
-.workpanel-content-container-odd {
-	transform: rotate3d(0,1,0,15deg);
+.workpanel-element.odd .workpanel-content-perspective {
+	align-self: flex-start;
+}
+
+.workpanel-element.even .workpanel-content-perspective {
+	align-self: flex-end;
+}
+
+.workpanel-element {
+	margin-top: 100px;
+	width: 600px;
+}
+
+.workpanel-element.even {
+	position: relative;
+	float: right;
+}
+
+.workpanel-element.odd {
+	position: relative;
+	top: 150px;
+	float: left;
+}
+
+.workpanel-element:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: calc(50% - 1px);
+	background-color: rgba(19, 10, 22, 1);
+}
+
+.workpanel-element.odd:after {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	top: 50%;
+	right: 0;
+	transform: translateX(50%) translateY(-50%);
+	background-color: rgba(19, 10, 22, 1);
+}
+
+.workpanel-element.even:after {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	top: 50%;
+	left: 0;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: rgba(19, 10, 22, 1);
+}
+
+.workpanel-element.odd .workpanel-content-case:hover,
+.workpanel-element.even .workpanel-content-case:hover {
+	transform: rotateY(0) scale(1.5);
+}
+
+.workpanel-element.odd .workpanel-content-case {
+	transform: rotateY(15deg);
 	transition: transform 1s ease;
+	transform-style: preserve-3d;
 }
 
-.workpanel-content-container-even {
-	transform: rotate3d(0,-1,0,15deg);
+.workpanel-element.even .workpanel-content-case {
+	transform: rotateY(-15deg);
 	transition: transform 1s ease;
+	transform-style: preserve-3d;
+}
+
+.workpanel-case-year {
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	font-size: 26px;
+}
+
+.workpanel-element.even .workpanel-case-year {
+	padding-right: 20px;
+	transform: translateX(-100%) translateY(-50%);
+	-webkit-transform: translateX(-100%) translateY(-50%);
+}
+
+.workpanel-element.odd .workpanel-case-year {
+	padding-left: 20px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	left: 100%;
 }
