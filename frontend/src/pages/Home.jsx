@@ -4,6 +4,7 @@ import {useState} from 'react';
 function Home () {
 	return (
 		<div className="home-global-container">
+		<div className="home-root-case">
 			<div className="home-portrait-container">
 				<div className="portrait-image">Portrait</div>
 			</div>
@@ -16,6 +17,7 @@ function Home () {
 					<p>a <span className="home-highlighted-text">web developer</span> looking for business opportunities</p>
 				</div>
 			</div>
+		</div>
 		</div>
 	);
 }

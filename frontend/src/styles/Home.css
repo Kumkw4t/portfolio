@@ -1,12 +1,19 @@
 .home-global-container {
 	height: 100vh;
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 70px;
+	background-color: rgba(234, 230, 236, 1);;
+}
+
+.home-root-case {
+	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
 	margin: auto;
-	padding-top: 70px;
-	background-color: rgba(234, 230, 236, 1);;
+	animation: append-animate 0.5s ease-out;
 }
 
 .home-content-container {
@@ -36,8 +43,8 @@
 .home-content-text span {
 	font-size: 70px;
 	font-weight: 500;
-	background: -webkit-linear-gradient(-45deg,#6bc5f8,#cf59e6,#6bc5f8,#cf59e6);
-	background: linear-gradient(-45deg,#6bc5f8,#cf59e6,#6bc5f8,#cf59e6);
+	background: -webkit-linear-gradient(-45deg,#5699e9,#cf59e6,#5699e9,#cf59e6);
+	background: linear-gradient(-45deg,#5699e9,#cf59e6,#5699e9,#cf59e6);
 	background-size: 400% 400%;
 	background-clip: text;
     -webkit-background-clip: text;

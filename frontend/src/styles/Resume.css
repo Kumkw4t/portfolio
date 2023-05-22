@@ -1,0 +1,109 @@
+.resume-global-case {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(234, 230, 236, 1);
+	padding: 100px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.resume-root-case {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	animation: append-animate 0.5s ease-out;
+}
+
+.resume-case {
+	padding: 30px 30px 40px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(19, 10, 22, 0.1);
+	border-radius: 25px;
+	width: 30%;
+	color: rgba(19, 10, 22, 1);
+/*	transition: transform 1s;*/
+}
+
+
+.resume-case * {
+	font-weight: 500;
+}
+
+.resume-case h2 {
+	margin: 0 0 20px 0;
+	font-size: 40px;
+}
+
+.skills-case {
+	gap: 10px;
+}
+
+.skill-line, .skill-value-case {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.skill-name {
+	width: 150px;
+	margin: 0;
+	cursor: default;
+}
+
+.skill-value-case {
+	gap: 5px;
+}
+
+.skill-circle {
+	width: 25px;
+	height: 25px;
+}
+
+.skill-circle svg {
+	width: 100%;
+	height: 100%;
+}
+
+
+.skill-line:hover stop:first-child {
+	animation: rotateStopGrad1 3s ease infinite;
+}
+
+.skill-line:hover stop:last-child {
+	animation: rotateStopGrad2 3s ease infinite;
+}
+
+@keyframes rotateStopGrad1 {
+    0% {
+        stop-color: #cf59e6;
+    }
+
+    50% {
+        stop-color: #5699e9;
+    }
+
+    to {
+        stop-color: #cf59e6;
+    }
+}
+
+@keyframes rotateStopGrad2 {
+    0% {
+        stop-color: #5699e9;
+    }
+
+    50% {
+        stop-color: #cf59e6;
+    }
+
+    to {
+        stop-color: #5699e9;
+    }
+}
