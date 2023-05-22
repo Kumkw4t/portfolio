@@ -1,5 +1,4 @@
 import '../styles/Works.css'
-import {useEffect} from 'react';
 import WorkPanel from '../components/WorkPanel';
 import workList from '../data/works.json'
 
