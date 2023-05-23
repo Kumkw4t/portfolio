@@ -11,11 +11,11 @@ function SkillLine ({ skillName, skillValue }) {
 
 	return (
 		<div className="skill-line">
-			<h3 className="skill-name">{skillName}</h3>
+			<h4 className="skill-name">{skillName}</h4>
 			<div className="skill-value-case">
-				{skillValueArray.map( val => (
+				{skillValueArray.map( (val,i) => (
 					val === 1 ?
-					(<div className="skill-circle full">
+					(<div key={`${skillName}${skillValue}full${i}`} className="skill-circle full">
 						<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						 	<defs>
 						    <linearGradient id={`grad${skillNameFormatted}`} x1="0%" y1="0%" x2="100%" y2="100%">
@@ -28,7 +28,7 @@ function SkillLine ({ skillName, skillValue }) {
 						</svg>
 					</div>)
 					:
-					(<div className="skill-circle empty">
+					(<div key={`${skillName}${skillValue}empty${i}`} className="skill-circle empty">
 						<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						<circle cx="50" cy="50" r="45" fill="#ada6b0"  stroke-width="10"/>
 						</svg>

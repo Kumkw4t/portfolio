@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-
 }
 
 body * {
@@ -11,6 +10,7 @@ body * {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+/*  outline: 1px solid red;*/
 }
 
 code {

@@ -1,0 +1,35 @@
+{
+
+	"thesis" : {
+		"name": "Cybersecurity PhD",
+		"date": "2017 - 2020",
+		"description": "",
+		"links": [
+			{ "title": "blabla", "url": "gros url" }
+		]
+	},
+	"graphist" : {
+		"name": "Freelance graphic design",
+		"date": "2021 - 2023",
+		"description": "graphiste",
+		"links": [
+			{ "title": "blabla", "url": "gros url" }
+		]
+	},
+	"devoteam" : {
+		"name": "Cybersecurity internship",
+		"date": "2017",
+		"description": "Frontend development of a travel agency frontpage",
+		"links": [
+			{ "title": "blabla", "url": "gros url" }
+		]
+	},
+	"thesis" : {
+		"name": "Cybersecurity PhD",
+		"date": "2020",
+		"description": "Frontend development of a travel agency frontpage",
+		"links": [
+			{ "title": "blabla", "url": "gros url" }
+		]
+	}
+}

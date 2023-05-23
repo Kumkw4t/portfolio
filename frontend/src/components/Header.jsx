@@ -16,7 +16,6 @@ function Header () {
 
  	const handleScroll = () => {
 	    const scrollPosition = window.scrollY;
-	    console.log(menuUserOpen.current);
 
 	    if ( scrollPosition > 0 && !(menuUserOpen.current) ) {
 	    	setMenuOpen(false);
