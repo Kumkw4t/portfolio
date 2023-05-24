@@ -1,35 +1,35 @@
-{
+[
 
-	"thesis" : {
+	{
 		"name": "Cybersecurity PhD",
 		"date": "2017 - 2020",
-		"description": "",
+		"description": "blabla on cybersecurity",
 		"links": [
-			{ "title": "blabla", "url": "gros url" }
+			{ "title": "lien associé", "url": "gros url" }
 		]
 	},
-	"graphist" : {
+	{
 		"name": "Freelance graphic design",
 		"date": "2021 - 2023",
-		"description": "graphiste",
+		"description": "blabla sur le graphisme",
 		"links": [
-			{ "title": "blabla", "url": "gros url" }
+			{ "title": "lien associé", "url": "gros url" }
 		]
 	},
-	"devoteam" : {
+	{
 		"name": "Cybersecurity internship",
 		"date": "2017",
-		"description": "Frontend development of a travel agency frontpage",
+		"description": "blabla on red team and security",
 		"links": [
-			{ "title": "blabla", "url": "gros url" }
+			{ "title": "lien associé", "url": "gros url" }
 		]
 	},
-	"thesis" : {
-		"name": "Cybersecurity PhD",
-		"date": "2020",
-		"description": "Frontend development of a travel agency frontpage",
+	{
+		"name": "Vinci Energy internship",
+		"date": "2016",
+		"description": "Development of a php-based web application for the team",
 		"links": [
-			{ "title": "blabla", "url": "gros url" }
+			{ "title": "lien associé", "url": "gros url" }
 		]
 	}
-}
+]

@@ -10,8 +10,7 @@ function Resume () {
 			<div className="resume-column left">
 			<div className="resume-case experience-case">
 				<h2>Experience</h2>
-				<ExperienceItem exDate={workExp.thesis.date} exName={workExp.thesis.name} 
-					exDescription={workExp.thesis.description} exLinks={workExp.thesis.links} />
+				{workExp.map( (el => ( <ExperienceItem key={el.name} exItem={el} />)))}
 			</div>
 			</div>
 

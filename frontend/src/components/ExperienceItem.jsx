@@ -1,13 +1,15 @@
-function ExperienceItem ({exDate, exName, exDescription, exLinks = []}) {
+import '../styles/ExperienceItem.css';
 
-	console.log(exLinks);
+function ExperienceItem ({exItem}) {
+
+	console.log(exItem);
 
 	return(
 		<div className="exp-case">
-			<h3 className="exp-title">{`${exDate} - ${exName}`}</h3>
-			<p className="exp-description">{exDescription}</p>
+			<h3 className="exp-title">{`${exItem.date} | ${exItem.name}`}</h3>
+			<p className="exp-description">{exItem.description}</p>
 			<div className="exp-links-case">
-			{exLinks ? (exLinks.map( el => (<a href={el.url}>{el.title}</a>))) : ""}
+			{exItem.links ? (exItem.links.map( el => (<a href={el.url}>{el.title}</a>))) : ""}
 			</div>
 		</div>
 	);

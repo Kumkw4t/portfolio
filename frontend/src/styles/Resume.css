@@ -11,7 +11,6 @@
 	flex-direction: row;
 	justify-content: space-around;
 	max-width: 1200px;
-	animation: append-animate 0.5s ease-out;
 	position: relative;
 }
 
@@ -25,6 +24,10 @@
 	gap: 30px;
 }
 
+.experience-case {
+	animation: append-animate 0.5s ease-out forwards;
+}
+
 .resume-case {
 	padding: 30px 30px 40px 30px;
 	display: flex;
@@ -35,6 +38,7 @@
 	border-radius: 25px;
 	width: 100%;
 	color: rgba(19, 10, 22, 1);
+	opacity: 0;
 }
 
 .resume-case * {
@@ -47,7 +51,7 @@
 }
 
 .resume-case h3 {
-	margin: 0;
+	margin: 0 0 5px 0;
 	font-weight: 500;
 	font-size: 20px;
 	text-align: left;
@@ -57,6 +61,7 @@
 	gap: 10px;
 	padding-left: 10%;
 	padding-right: 10%;
+	animation: append-animate 0.5s ease-out 0.2s forwards;
 }
 
 .subskill-case {
@@ -83,7 +88,7 @@
 	min-width: 150px;
 	max-width: 100%;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 16px;
 	margin: 0;
 	cursor: default;
 }
@@ -108,6 +113,10 @@
 
 .skill-line:hover stop:last-child {
 	animation: rotateStopGrad2 3s ease infinite;
+}
+
+.education-case {
+	animation: append-animate 0.5s ease-out 0.4s forwards;
 }
 
 @keyframes rotateStopGrad1 {

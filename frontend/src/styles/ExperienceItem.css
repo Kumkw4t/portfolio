@@ -1,0 +1,53 @@
+.exp-case {
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px 20px;
+	position: relative;
+}
+
+.exp-case:hover {
+	animation: border-gradient 4s ease infinite;
+}
+
+.exp-case:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background: rgba(19, 10, 22, 1);
+	background-size: 100% 400%;
+}
+
+.exp-case:hover:before {
+	background: -webkit-linear-gradient(-45deg,#5699e9,#cf59e6,#5699e9,#cf59e6);
+	background: linear-gradient(-45deg,#5699e9,#cf59e6,#5699e9,#cf59e6);
+	background-size: 100% 400%;
+    -webkit-animation: border-gradient 6s ease infinite;
+    animation: border-gradient 6s ease infinite;
+}
+
+h3.exp-title {
+	margin-bottom: 20px;
+}
+
+.exp-description {
+	font-weight: 300;
+	font-size: 16px;
+	margin: 0;
+}
+
+@keyframes border-gradient {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 50% 100%
+    }
+
+    to {
+        background-position: 50% 0%
+    }
+}
