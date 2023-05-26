@@ -18,10 +18,9 @@
 }
 
 .workpanel-content-case {
-	width: 750px;
-	height: 450px;
-	background-color: grey;
-/*	background-color: rgba(19, 10, 22, 1);*/
+	width: 700px;
+	height: 400px;
+	background-color: rgba(19, 10, 22, 1);
 	z-index: 2;
 	color: white;
 	position: relative;
@@ -34,24 +33,24 @@
 
 .workpanel-element.odd .workpanel-content-perspective {
 	align-self: flex-start;
-	transform: translate(-50px,-75px);
+	transform: translate(-25px,0);
 }
 
 .workpanel-element.even .workpanel-content-perspective {
 	align-self: flex-end;
-	transform: translate(50px,-75px);
+	transform: translate(25px,0);
 }
 
 .workpanel-element {
-	margin-top: 100px;
+	margin-top: 50px;
 	width: 600px;
-	height: 300px;
+	height: 400px;
 }
 
 .workpanel-element.even {
 	position: relative;
 	float: left;
-	top: 200px;
+	top: 225px;
 }
 
 .workpanel-element.odd {
