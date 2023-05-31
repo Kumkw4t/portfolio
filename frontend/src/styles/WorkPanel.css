@@ -75,28 +75,24 @@
 	right: 0;
 }
 
-.workpanel-element.odd:after {
+.workpanel-element:after {
 	content: "";
 	position: absolute;
-	width: 8px;
-	height: 8px;
+	width: 15px;
+	height: 15px;
 	border-radius: 50%;
 	top: 50%;
-	left: 1px;
-	transform: translateX(-50%) translateY(-50%);
 	background-color: rgba(19, 10, 22, 1);
 }
 
+.workpanel-element.odd:after {
+	left: 0;
+	transform: translateX(-50%) translateY(-50%);
+}
+
 .workpanel-element.even:after {
-	content: "";
-	position: absolute;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	top: 50%;
 	right: 0;
 	transform: translateX(50%) translateY(-50%);
-	background-color: rgba(19, 10, 22, 1);
 }
 
 .workpanel-element.odd .workpanel-content-case:hover,
