@@ -1,16 +1,21 @@
 import '../styles/WorkPanel.css';
 import workList from '../data/works.json';
+import { useState } from 'react';
 
 function WorkPanel ( {workId, isEven}) {
 
-	const work = workList.find( (element) => element.id === workId);
+	const [isHover, setIsHover] = useState(false);
 
+	const work = workList.find( (element) => element.id === workId);
+	
 	return(
 		<li className={isEven ? "workpanel-root-case workpanel-element even" : "workpanel-root-case workpanel-element odd"}>
 		<div className="workpanel-case-year"><p>{work.year}</p></div>
 		<div className="workpanel-content-perspective">
 		<div className="workpanel-content-case">
-			<div className="workpanel-image">Image</div>
+			<div className="workpanel-image">
+				<img src={work.cover_img} />
+			</div>
 			<div className="wokpanel-content">
 				<div className="workpanel-title">{workId}</div>
 				<div className="workpanel-text">{work.title}</div>

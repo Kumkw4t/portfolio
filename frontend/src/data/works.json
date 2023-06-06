@@ -3,7 +3,7 @@
 		"id": "9e8a5aa2",
 		"category": "frontend",
 		"title": "Booki",
-		"cover_img": "",
+		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development of a travel agency frontpage",
 		"tags": [
@@ -36,7 +36,7 @@
 		"id": "0623f3f9",
 		"category": "frontend",
 		"title": "Kasa",
-		"cover_img": "",
+		"cover_img": "../assets/kasa/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development for a house rental agency website",
 		"tags": [
@@ -70,7 +70,7 @@
 		"id": "2495ce5c",
 		"category": "backend",
 		"title": "Mon vieux grimoire",
-		"cover_img": "",
+		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Backend development for a books rating website",
 		"skills": [
@@ -105,7 +105,7 @@
 		"id": "d6b8ba97",
 		"category": "frontend",
 		"title": "Photograph's website",
-		"cover_img": "",
+		"cover_img": "/assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development for a photograph's website",
 		"skills": [

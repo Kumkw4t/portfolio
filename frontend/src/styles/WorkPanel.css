@@ -132,3 +132,10 @@
 	-webkit-transform: translateX(-100%) translateY(-50%);
 	padding-right: 20px;
 }
+
+.workpanel-image img {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
