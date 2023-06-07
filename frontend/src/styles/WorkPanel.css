@@ -20,7 +20,7 @@
 .workpanel-content-case {
 	width: 700px;
 	height: 400px;
-	background-color: rgba(19, 10, 22, 1);
+/*	background-color: rgba(19, 10, 22, 1);*/
 	z-index: 2;
 	color: white;
 	position: relative;
