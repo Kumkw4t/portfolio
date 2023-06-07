@@ -143,7 +143,7 @@
 	opacity: 0;
 	z-index: 2;
 	background-color: rgba(19, 10, 22, 0.6);
-	transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease 0.15s;
 	display: flex;
 	justify-content: center;
 	align-items: center;
