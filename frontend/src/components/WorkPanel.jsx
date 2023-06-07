@@ -1,20 +1,41 @@
 import '../styles/WorkPanel.css';
+import '../styles/WorkDialog.css';
 import workList from '../data/works.json';
 import { useState } from 'react';
 
 function WorkPanel ( {workId, isEven}) {
 
 	const [isHover, setIsHover] = useState(false);
-
 	const work = workList.find( (element) => element.id === workId);
-	
+	const dialog = document.getElementById(`dialog${workId}`);
+
+	function openModal () {
+		dialog.showModal();
+		document.body.style.overflow = "hidden";	}
+
+	function closeModal () {
+		dialog.close("");
+		document.body.style.overflow = "unset"
+	}
+
+	function startHover () {
+		setIsHover(true);
+	}
+
+	function endHover () {
+		setIsHover(false);
+	}
+
 	return(
 		<li className={isEven ? "workpanel-root-case workpanel-element even" : "workpanel-root-case workpanel-element odd"}>
 		<div className="workpanel-case-year"><p>{work.year}</p></div>
 		<div className="workpanel-content-perspective">
-		<div className="workpanel-content-case">
+		<div className="workpanel-content-case" onClick={openModal} onMouseEnter={startHover} onMouseLeave={endHover} >
+			<div className={isHover ? "workpanel-content-case-hover isHover" : "workpanel-content-case-hover"}>
+				<img src={work.logo} alt=""/>
+			</div>
 			<div className="workpanel-image">
-				<img src={work.cover_img} />
+				<img src={work.cover_img} alt=""/>
 			</div>
 			<div className="wokpanel-content">
 				<div className="workpanel-title">{workId}</div>
@@ -22,6 +43,30 @@ function WorkPanel ( {workId, isEven}) {
 			</div>
 		</div>
 		</div>
+
+		<dialog id={`dialog${workId}`} className="work-dialog" close>
+			<button onClick={closeModal}>Return</button>
+			<div className="work-dialog-header">
+				<div className="work-dialog-header-img"><p>Image présentation - mockups</p></div>
+				<div className="work-dialog-header-text">
+					<h4>{work.title}</h4>
+					<p>{work.year}</p>
+					<p>{work.description}</p>
+					<ul>
+					{work.skills.map( (skill) => (<li key={`${workId}-${skill}`}>{skill}</li>))}
+					</ul>
+				</div>
+			</div>
+			<div className="work-dialog-images-grid">
+				{work.pictures.map( (img, index) => (
+					( index%4 === 0 || index%4 === 3) ? 
+					(<div className="work-dialog-images-grid-item images-grid-item__large"><p>Images supplémentaires {`${index+1}`}</p></div>)
+					:
+					(<div className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
+				))}
+			</div>
+		</dialog>
+
 		</li>
 	);
 }

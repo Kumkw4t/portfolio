@@ -6,17 +6,18 @@
 		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development of a travel agency frontpage",
-		"tags": [
+		"logo" : "../assets/booki/logo.png",
+		"skills": [
 			"HTML",
 			"CSS",
 			"School project"
 		],
 		"pictures": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"image1",
+			"image2",
+			"image3",
+			"image4",
+			"image5"
 		],
 		"videos": [
 			"",
@@ -39,18 +40,19 @@
 		"cover_img": "../assets/kasa/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development for a house rental agency website",
-		"tags": [
+		"logo" : "../assets/kasa/logo.svg",
+		"skills": [
 			"HTML",
 			"CSS",
 			"React",
 			"School project"
 		],
 		"pictures": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"image1",
+			"image2",
+			"image3",
+			"image4",
+			"image5"
 		],
 		"videos": [
 			"",
@@ -73,19 +75,20 @@
 		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Backend development for a books rating website",
+		"logo" : "../assets/booki/logo.png",
 		"skills": [
 			"NodeJS",
 			"Express",
 			"MongoDB",
 			"Server security",
-			"School porject"
+			"School project"
 		],
 		"pictures": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"image1",
+			"image2",
+			"image3",
+			"image4",
+			"image5"
 		],
 		"videos": [
 			"",
@@ -108,17 +111,19 @@
 		"cover_img": "/assets/booki/thumbnail.png",
 		"cover_video": "",
 		"description": "Frontend development for a photograph's website",
+		"logo" : "../assets/booki/logo.png",
 		"skills": [
 			"HTML",
 			"CSS",
-			"Responsive"
+			"Responsive",
+			"School project"
 		],
 		"pictures": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"image1",
+			"image2",
+			"image3",
+			"image4",
+			"image5"
 		],
 		"videos": [
 			"",

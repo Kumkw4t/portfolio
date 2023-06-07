@@ -115,6 +115,10 @@
 	animation: rotateStopGrad2 3s ease infinite;
 }
 
+.skill-line:hover {
+	padding-left: 1em;
+}
+
 .education-case {
 	animation: append-animate 0.5s ease-out 0.4s forwards;
 }

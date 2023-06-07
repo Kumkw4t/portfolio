@@ -7,6 +7,7 @@
 
 .exp-case:hover {
 	animation: border-gradient 4s ease infinite;
+	margin-left: 3em;
 }
 
 .exp-case:before {
