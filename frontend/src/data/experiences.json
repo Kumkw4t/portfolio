@@ -3,33 +3,28 @@
 	{
 		"name": "Cybersecurity PhD",
 		"date": "2017 - 2020",
-		"description": "blabla on cybersecurity",
+		"description": "I worked on symbolic deobfuscation and its application to malware analysis. The PhD took place in a french research lab at CEA focusing on formal methods. I developped obfuscations method robust against symbolic analysis using C, Ocaml and python.",
 		"links": [
-			{ "title": "lien associé", "url": "gros url" }
+			{ "title": "ACSAC 2019 article", "url": "https://dl.acm.org/doi/10.1145/3359789.3359812" }
 		]
 	},
 	{
 		"name": "Freelance graphic design",
 		"date": "2021 - 2023",
-		"description": "blabla sur le graphisme",
+		"description": "I do freelance design work for Twitch streamers. I create streaming assets including illustrations, motions design alerts and animated screens",
 		"links": [
-			{ "title": "lien associé", "url": "gros url" }
+			{ "title": "Esty shop", "url": "https://www.etsy.com/shop/Kumkw4tDesigns" },
+			{ "title": "Behance", "url": "https://www.behance.net/mathjunk" }
 		]
 	},
 	{
 		"name": "Cybersecurity internship",
 		"date": "2017",
-		"description": "blabla on red team and security",
-		"links": [
-			{ "title": "lien associé", "url": "gros url" }
-		]
+		"description": "I joind a pentesting team for 6 month. I helped on web pentesting missions and did research work about the communication protocol NFC."
 	},
 	{
 		"name": "Vinci Energy internship",
 		"date": "2016",
-		"description": "Development of a php-based web application for the team",
-		"links": [
-			{ "title": "lien associé", "url": "gros url" }
-		]
+		"description": "Development of a php-based web application for the team"
 	}
 ]

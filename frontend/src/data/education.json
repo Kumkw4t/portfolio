@@ -1,0 +1,20 @@
+[
+	{
+		"name": "OpenClassroom web delevoper course",
+		"date": "2023",
+		"description": "8 month remote course about web development under the supervison of a mentor. The program regroups 8 projects which require skills including HTML, CSS, JavaScript, React, NodeJS or project management."
+	},
+	{
+		"name": "Cybersecurity PhD",
+		"date": "2017 - 2020",
+		"description": "3 year PhD program on symbolic deobfuscation and its application to malware analysis.",
+		"links": [
+			{ "title": "ACSAC 2019 article", "url": "https://dl.acm.org/doi/10.1145/3359789.3359812" }
+		]
+	},
+	{
+		"name": "CentraleSupélec",
+		"date": "2013 - 2017",
+		"description": "Master level french engineering school. Master specialization in Cybersecurity."
+	}
+]

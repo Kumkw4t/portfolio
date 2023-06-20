@@ -2,19 +2,20 @@ import '../styles/Resume.css'
 import SkillLine from '../components/SkillLine';
 import ExperienceItem from '../components/ExperienceItem';
 import workExp from '../data/experiences.json';
+import edList from '../data/education.json';
 
 function Resume () {
 	return(
 		<div className="resume-global-case">
 		<div className="resume-root-case">
-			<div className="resume-column left">
+			<div className="resume-column-left">
 			<div className="resume-case experience-case">
 				<h2>Experience</h2>
 				{workExp.map( (el => ( <ExperienceItem key={el.name} exItem={el} />)))}
 			</div>
 			</div>
 
-			<div className="resume-column right">
+			<div className="resume-column-right">
 			<div className="resume-case skills-case">
 				<h2>Skills</h2>
 				<div className="hard-skills subskill-case">
@@ -54,7 +55,7 @@ function Resume () {
 
 			<div className="resume-case education-case">
 				<h2>Education</h2>
-				<p>blabla</p>
+				{edList.map( (el => ( <ExperienceItem key={el.name} exItem={el} />)))}
 			</div>
 			</div>
 		</div>

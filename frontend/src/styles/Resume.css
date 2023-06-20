@@ -9,19 +9,23 @@
 	margin: auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-items: flex-start;
 	max-width: 1200px;
 	position: relative;
+	gap: 2em;
 }
 
-.resume-column {
-	width: 47%;
+.resume-column-left {
+	flex-grow: 2;
 }
 
-.resume-column.right {
+.resume-column-right {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 2em;
+	flex-shrink: 2;
+	min-width: 40%;
 }
 
 .experience-case {
@@ -32,13 +36,13 @@
 	padding: 30px 30px 40px 30px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	background-color: rgba(19, 10, 22, 0.1);
-	border-radius: 25px;
-	width: 100%;
+	border-radius: 15px;
 	color: rgba(19, 10, 22, 1);
 	opacity: 0;
+	width: 100%;
 }
 
 .resume-case * {
@@ -47,20 +51,18 @@
 
 .resume-case h2 {
 	margin: 0 0 10px 0;
-	font-size: 40px;
+	font-size: 30px;
 }
 
 .resume-case h3 {
 	margin: 0 0 5px 0;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: left;
 }
 
 .skills-case {
 	gap: 10px;
-	padding-left: 10%;
-	padding-right: 10%;
 	animation: append-animate 0.5s ease-out 0.2s forwards;
 }
 
@@ -75,7 +77,6 @@
 .skill-line {
 	width: 100%;
 	justify-content: space-between;
-
 }
 
 .skill-line, .skill-value-case {

@@ -1,12 +1,28 @@
 .home-global-container {
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding-top: 70px;
-	background-color: rgba(234, 230, 236, 1);;
+	overflow: hidden;
+	background-color: rgba(234, 230, 236, 1);
+/*	background-image: url("../../public/ivana-cajina-asuyh-_ZX54-unsplash.jpg");*/
+/*	background-size: 40%;*/
 }
 
+/*.home-global-container:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../../public/ivana-cajina-asuyh-_ZX54-unsplash2.jpg");
+	background-size: 100% 100%;
+	background-clip: border-box;
+	z-index: -1;
+}
+*/
 .home-root-case {
 	display: flex;
 	flex-direction: row-reverse;
