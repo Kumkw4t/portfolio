@@ -44,3 +44,9 @@
 	d: path("M 35 25 L 35 25");
 	transition: opacity 0.3s, d 0.2s;
 }
+
+@media screen and (max-width: 425px) {
+	.nav-burger {
+		left: 10px;
+	}
+}

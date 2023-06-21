@@ -37,17 +37,15 @@ function Header () {
 	  	};
 	 });
 
-
 	return (
 		<div>
 		<MenuBurger menuState={menuOpen} onPress={userToggleMenu} />
 		<div className={menuOpen ? "header-wrapper" : "header-wrapper header-hidden-desktop"}>
-			<p className="header-logo mobile">Hi.</p>
 			<nav className="nav-wrapper">
-				<Link to={`/`} className="nav-element"><p className="nav-text">Home</p></Link>
-				<Link to={`/works`} className="nav-element"><p className="nav-text">Works</p></Link>
-				<Link to={`/resume`} className="nav-element"><p className="nav-text">Resume</p></Link>
-				<Link to={`/about`} className="nav-element"><p className="nav-text">About</p></Link>
+				<Link to={`/`} className="nav-element" id="nav-home"><p className="nav-text">Home</p></Link>
+				<Link to={`/works`} className="nav-element" id="nav-works"><p className="nav-text">Works</p></Link>
+				<Link to={`/resume`} className="nav-element" id="nav-resume"><p className="nav-text">Resume</p></Link>
+				<Link to={`/about`} className="nav-element" id="nav-about"><p className="nav-text">About</p></Link>
 			</nav>
 		</div>
 		</div>

@@ -11,7 +11,8 @@ function WorkPanel ( {workId, isEven}) {
 
 	function openModal () {
 		dialog.showModal();
-		document.body.style.overflow = "hidden";	}
+		document.body.style.overflow = "hidden";
+	}
 
 	function closeModal () {
 		dialog.close("");
@@ -34,17 +35,11 @@ function WorkPanel ( {workId, isEven}) {
 			<div className={isHover ? "workpanel-content-case-hover isHover" : "workpanel-content-case-hover"}>
 				<img src={work.logo} alt=""/>
 			</div>
-			<div className="workpanel-image">
-				<img src={work.cover_img} alt=""/>
-			</div>
-			<div className="wokpanel-content">
-				<div className="workpanel-title">{workId}</div>
-				<div className="workpanel-text">{work.title}</div>
-			</div>
+			<img height="400" width="700" src={work.cover_img} alt=""/>
 		</div>
 		</div>
 
-		<dialog id={`dialog${workId}`} className="work-dialog" close>
+		<dialog id={`dialog${workId}`} className="work-dialog" close="true">
 			<button onClick={closeModal}>Return</button>
 			<div className="work-dialog-header">
 				<div className="work-dialog-header-img"><p>Image présentation - mockups</p></div>
@@ -60,9 +55,9 @@ function WorkPanel ( {workId, isEven}) {
 			<div className="work-dialog-images-grid">
 				{work.pictures.map( (img, index) => (
 					( index%4 === 0 || index%4 === 3) ? 
-					(<div className="work-dialog-images-grid-item images-grid-item__large"><p>Images supplémentaires {`${index+1}`}</p></div>)
+					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__large"><p>Images supplémentaires {`${index+1}`}</p></div>)
 					:
-					(<div className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
+					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
 				))}
 			</div>
 		</dialog>

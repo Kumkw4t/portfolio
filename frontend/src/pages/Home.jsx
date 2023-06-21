@@ -1,7 +1,16 @@
 import '../styles/Home.css'
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 function Home () {
+
+	// const currentPage = document.getElementById("nav-home");
+	// const otherPages = [document.getElementById("nav-resume"),document.getElementById("nav-works"),document.getElementById("nav-about")]
+
+	// useEffect( () => {
+	// 	if (currentPage != null) {currentPage.classList.add("selected")};
+	// 	if (otherPages != null) {otherPages.map((nav) => (nav.classList.remove("selected")))};
+	// }, [currentPage, otherPages]);
+
 	return (
 		<div className="home-global-container">
 		<div className="home-root-case">

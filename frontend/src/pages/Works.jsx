@@ -2,7 +2,18 @@ import '../styles/Works.css'
 import WorkPanel from '../components/WorkPanel';
 import workList from '../data/works.json'
 
+import { useEffect } from 'react';
+
 function Works () {
+
+	// const currentPage = document.getElementById("nav-works");
+	// const otherPages = [document.getElementById("nav-home"),document.getElementById("nav-resume"),document.getElementById("nav-about")]
+
+	// useEffect( () => {
+	// 	if (currentPage) {currentPage.classList.add("selected")};
+	// 	if (otherPages) {otherPages.map((nav) => (nav.classList.remove("selected")))};
+	// }, [currentPage, otherPages]);
+
 	return(
 		<div className="works-global-container">
 		<div className="works-root-container">
