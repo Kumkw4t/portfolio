@@ -1,21 +1,25 @@
 import '../styles/WorkPanel.css';
 import '../styles/WorkDialog.css';
 import workList from '../data/works.json';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function WorkPanel ( {workId, isEven}) {
 
 	const [isHover, setIsHover] = useState(false);
 	const work = workList.find( (element) => element.id === workId);
-	const dialog = document.getElementById(`dialog${workId}`);
+	const dialog = useRef(null);
+
+	useEffect( () => {
+		dialog.current = document.getElementById(`dialog${workId}`);
+	});
 
 	function openModal () {
-		dialog.showModal();
+		dialog.current.showModal();
 		document.body.style.overflow = "hidden";
 	}
 
 	function closeModal () {
-		dialog.close("");
+		dialog.current.close("");
 		document.body.style.overflow = "unset"
 	}
 
