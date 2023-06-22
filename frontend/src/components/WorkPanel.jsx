@@ -34,8 +34,8 @@ function WorkPanel ( {workId, isEven}) {
 	return(
 		<li className={isEven ? "workpanel-root-case workpanel-element even" : "workpanel-root-case workpanel-element odd"}>
 		<div className="workpanel-case-year"><p>{work.year}</p></div>
-		<div className="workpanel-content-perspective">
-		<div className="workpanel-content-case" onClick={openModal} onMouseEnter={startHover} onMouseLeave={endHover} >
+		<div className="workpanel-content-perspective" onClick={openModal}>
+		<div className="workpanel-content-case" onMouseEnter={startHover} onMouseLeave={endHover} >
 			<div className={isHover ? "workpanel-content-case-hover isHover" : "workpanel-content-case-hover"}>
 				<img src={work.logo} alt=""/>
 			</div>
@@ -43,7 +43,8 @@ function WorkPanel ( {workId, isEven}) {
 		</div>
 		</div>
 
-		<dialog id={`dialog${workId}`} className="work-dialog" close="true">
+		<dialog id={`dialog${workId}`} className="work-dialog" close="true" onClick={closeModal}>
+			<div className="inside-dialog" onClick={(event) => (event.stopPropagation())} >
 			<button onClick={closeModal}>Return</button>
 			<div className="work-dialog-header">
 				<div className="work-dialog-header-img"><p>Image présentation - mockups</p></div>
@@ -63,6 +64,7 @@ function WorkPanel ( {workId, isEven}) {
 					:
 					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
 				))}
+			</div>
 			</div>
 		</dialog>
 

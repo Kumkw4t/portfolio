@@ -1,17 +1,18 @@
 import '../styles/Home.css'
-import {useState,useEffect} from 'react';
+import Background from '../components/Background';
+import {useEffect} from 'react';
 
 function Home () {
 
-	// const currentPage = document.getElementById("nav-home");
-	// const otherPages = [document.getElementById("nav-resume"),document.getElementById("nav-works"),document.getElementById("nav-about")]
-
-	// useEffect( () => {
-	// 	if (currentPage != null) {currentPage.classList.add("selected")};
-	// 	if (otherPages != null) {otherPages.map((nav) => (nav.classList.remove("selected")))};
-	// }, [currentPage, otherPages]);
+	useEffect( () => {
+		const currentPage = document.getElementById("nav-home");
+		const otherPages = [document.getElementById("nav-resume"),document.getElementById("nav-works"),document.getElementById("nav-about")]
+		if (currentPage != null) {currentPage.classList.add("selected")};
+		if (otherPages != null) {otherPages.map((nav) => (nav.classList.remove("selected")))};
+	});
 
 	return (
+		<Background>
 		<div className="home-global-container">
 		<div className="home-root-case">
 			<div className="home-portrait-container">
@@ -28,6 +29,7 @@ function Home () {
 			</div>
 		</div>
 		</div>
+		</Background>
 	);
 }
 

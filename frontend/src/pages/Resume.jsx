@@ -1,5 +1,6 @@
 import '../styles/Resume.css'
 import SkillLine from '../components/SkillLine';
+import Background from '../components/Background';
 import ExperienceItem from '../components/ExperienceItem';
 import workExp from '../data/experiences.json';
 import edList from '../data/education.json';
@@ -7,16 +8,15 @@ import edList from '../data/education.json';
 import { useEffect } from 'react';
 
 function Resume () {
-
-	// const currentPage = document.getElementById("nav-resume");
-	// const otherPages = [document.getElementById("nav-home"),document.getElementById("nav-works"),document.getElementById("nav-about")]
-
-	// useEffect( () => {
-	// 	if (currentPage != null) {currentPage.classList.add("selected")};
-	// 	if (otherPages != null) {otherPages.map((nav) => (nav.classList.remove("selected")))};
-	// }, [currentPage, otherPages]);
+	useEffect( () => {
+		const currentPage = document.getElementById("nav-resume");
+		const otherPages = [document.getElementById("nav-home"),document.getElementById("nav-works"),document.getElementById("nav-about")]
+		if (currentPage != null) {currentPage.classList.add("selected")};
+		if (otherPages != null) {otherPages.map((nav) => (nav.classList.remove("selected")))};
+	});
 
 	return(
+		<Background>
 		<div className="resume-global-case">
 		<div className="resume-root-case">
 			<div className="resume-column-left">
@@ -71,6 +71,7 @@ function Resume () {
 			</div>
 		</div>
 		</div>
+		</Background>
 	);
 }
 

@@ -1,7 +1,6 @@
 .resume-global-case {
 	width: 100%;
 	min-height: 100vh;
-	background-color: rgba(234, 230, 236, 1);
 	padding: 100px 0;
 }
 
@@ -122,6 +121,24 @@
 
 .education-case {
 	animation: append-animate 0.5s ease-out 0.4s forwards;
+}
+
+@media screen and (max-width: 768px) {
+	.resume-root-case {
+		flex-direction: column;
+		padding: 0 5%;
+	}
+
+	.skill-name {
+		min-width: 125px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.skill-circle {
+		width: 18px;
+		height: 18px;
+	}
 }
 
 @keyframes rotateStopGrad1 {
