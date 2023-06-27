@@ -1,0 +1,33 @@
+.about-root-case {
+	padding: 150px 12%;
+}
+
+.interests-root-case {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 5%;
+}
+
+.interest-case {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+    background-color: rgba(19, 10, 22, 0.1);
+    border-radius: 15px;
+    padding: 2%;
+    opacity: 0.5;
+	transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+
+.interest-case-title {
+	font-weight: 400;
+	margin: 1em 0;
+}
+.interest-case.active {
+	transform: scale(1.2);
+	opacity: 1;
+}
