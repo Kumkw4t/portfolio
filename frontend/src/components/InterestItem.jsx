@@ -1,18 +1,21 @@
 import {useState} from 'react';
 
-function InterestItem ({item, isActive}) {
+function InterestItem ({item,isActive = false,handleActive}) {
 
-	const [isHover,setIsHover] = useState(isActive);
+	const [isHover,setIsHover] = useState(false);
+
 	function startHover () {
 		setIsHover(true);
+		handleActive(false);
 	}
 
 	function endHover() {
 		setIsHover(false);
+		handleActive(true);
 	}
 
 	return(
-		<div className={isHover ? "interest-case active" : "interest-case"} onMouseEnter={startHover} onMouseLeave={endHover}>
+		<div className={(isHover || isActive) ? "interest-case active" : "interest-case"} onMouseEnter={startHover} onMouseLeave={endHover}>
 			<h2 className="interest-case-title">{item.title}</h2>
 			<p>{item.text}</p>
 		</div>

@@ -1,5 +1,28 @@
-.test {
-    background-color: rgba(234, 230, 236, 1);
-	min-height: 100vh;
-	width: 100%;
+.background {
+	overflow: hidden;
+/*	position: absolute;
+	top: 0;
+	left: 0;*/
+/*    background-color: rgba(234, 230, 236, 1);*/
+/*	height: calc(100% - 80px);*/
+/*	width: 100vw;*/
+/*	max-width: 100vw;*/
+/*	z-index: -1;*/
+}
+
+.canvas {
+/*	display: none;*/
+	position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100vw;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100% - 50px);
+/*    z-index: -1;*/
+}
+
+.canvas canvas {
+	overflow-clip-margin: content-box;
+    overflow: clip;
 }

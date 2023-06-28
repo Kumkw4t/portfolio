@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  position: relative;
 }
 
 body * {
@@ -17,6 +18,11 @@ body * {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+main:last-child {
+/*    pointer-events: none;*/
+    z-index: 1;
 }
 
 @keyframes append-animate {

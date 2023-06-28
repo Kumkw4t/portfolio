@@ -2,6 +2,7 @@
 	width: 100%;
 	min-height: 100vh;
 	padding: 100px 0;
+	pointer-events: none;
 }
 
 .resume-root-case {
@@ -70,10 +71,8 @@
 }
 
 .skill-line {
+	pointer-events: auto;
 	padding-top: 2px;
-}
-
-.skill-line {
 	width: 100%;
 	justify-content: space-between;
 }

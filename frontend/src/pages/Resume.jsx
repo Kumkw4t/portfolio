@@ -1,7 +1,7 @@
 import '../styles/Resume.css'
 import SkillLine from '../components/SkillLine';
-import Background from '../components/Background';
 import ExperienceItem from '../components/ExperienceItem';
+import Background from '../components/Background';
 import workExp from '../data/experiences.json';
 import edList from '../data/education.json';
 

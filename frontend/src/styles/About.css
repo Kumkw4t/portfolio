@@ -1,5 +1,8 @@
 .about-root-case {
-	padding: 150px 12%;
+	position: relative;
+	padding: 150px 12% 50px 12%;
+	pointer-events: none;
+	z-index: 1;
 }
 
 .interests-root-case {
@@ -7,9 +10,11 @@
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 5%;
+	margin-top: 50px;
 }
 
 .interest-case {
+	pointer-events: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -27,6 +32,7 @@
 	font-weight: 400;
 	margin: 1em 0;
 }
+
 .interest-case.active {
 	transform: scale(1.2);
 	opacity: 1;

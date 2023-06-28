@@ -3,6 +3,7 @@
 	border-radius: 15px;
 	padding: 0;
 	max-height: 80vh;
+	pointer-events: auto;
 }
 
 .work-dialog::backdrop {

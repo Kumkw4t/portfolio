@@ -1,5 +1,6 @@
 .works-global-container {
 	min-height: 100vh;
+	pointer-events: none;
 }
 
 .works-root-container {
