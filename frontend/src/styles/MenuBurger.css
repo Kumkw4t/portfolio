@@ -6,7 +6,8 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	background-color: rgba(19, 10, 22, 1);
+/*	background-color: rgba(19, 10, 22, 1);*/ /* Light */
+	background-color: #f3f6fa;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -25,7 +26,8 @@
 	height: 100%;
 }
 .burger-svg path {
-	stroke: rgba(255,255,255, 1);
+/*	stroke: rgba(255,255,255, 1);*/ /* Light */
+	stroke: #0e1012;
 	transition: d 0.4s;
 }
 

@@ -3,7 +3,6 @@
 	margin: 10px 0;
 	padding: 10px 20px;
 	position: relative;
-	pointer-events: auto;
 }
 
 .exp-case:hover {
@@ -18,7 +17,7 @@
 	left: 0;
 	height: 100%;
 	width: 3px;
-	background: rgba(19, 10, 22, 1);
+	background: #5699e9;
 	background-size: 100% 400%;
 }
 
@@ -54,7 +53,7 @@ h3.exp-title {
 }
 
 .exp-link {
-	color: #cf59e6;
+	text-decoration-color: #5699e9;
 }
 
 @keyframes border-gradient {

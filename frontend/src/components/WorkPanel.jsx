@@ -8,10 +8,25 @@ function WorkPanel ( {workId, isEven}) {
 	const [isHover, setIsHover] = useState(false);
 	const work = workList.find( (element) => element.id === workId);
 	const dialog = useRef(null);
+	const [mousePosition, setMousePosition] = useState([0,0]);
 
 	useEffect( () => {
 		dialog.current = document.getElementById(`dialog${workId}`);
-	});
+		const currentWorkPanel = document.getElementById(`${workId}-hover-case`);
+
+		const getElementMousePos = (e) => {
+			const rect = currentWorkPanel.getBoundingClientRect();
+			if (e.clientX > rect.left && e.clientX < rect.right && e.clientY > rect.top && e.clientY < rect.bottom) {
+	  		  	setMousePosition([e.clientX - rect.left,e.clientY - rect.top]);
+			}
+	    };
+
+	   	currentWorkPanel.addEventListener('mousemove',getElementMousePos);
+
+	    return () => {
+			currentWorkPanel.removeEventListener('mousemove',getElementMousePos);
+	    };
+	}, mousePosition);
 
 	function openModal () {
 		dialog.current.showModal();
@@ -36,7 +51,8 @@ function WorkPanel ( {workId, isEven}) {
 		<div className="workpanel-case-year"><p>{work.year}</p></div>
 		<div className="workpanel-content-perspective" onClick={openModal}>
 		<div className="workpanel-content-case" onMouseEnter={startHover} onMouseLeave={endHover} >
-			<div className={isHover ? "workpanel-content-case-hover isHover" : "workpanel-content-case-hover"}>
+			<div id={`${workId}-hover-case`} className={isHover ? "workpanel-content-case-hover isHover" : "workpanel-content-case-hover"} 
+			style={{'--x': mousePosition[0],'--y': mousePosition[1]}} >
 				<img src={work.logo} alt=""/>
 			</div>
 			<img height="400" width="700" src={work.cover_img} alt=""/>

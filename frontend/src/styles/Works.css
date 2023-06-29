@@ -1,6 +1,5 @@
 .works-global-container {
 	min-height: 100vh;
-	pointer-events: none;
 }
 
 .works-root-container {
@@ -14,7 +13,13 @@
 	left: 50%;
     content: '';
     display: block;
-    background-color: rgba(19, 10, 22, 1);
+/*    background-color: rgba(19, 10, 22, 1);*/ /*Light*/
+/*	border: dashed 1px #c2bec4;*/
+/*	background-color: #c2bec4;*/
+	background: repeating-linear-gradient(to bottom, transparent, transparent 10px, #c2bec4 10px, #c2bec4 210px,
+		transparent 210px,transparent 250px, #c2bec4 250px, #c2bec4 435px, transparent 435px, transparent 475px,
+		#c2bec4 475px, #c2bec4 660px, transparent 660px, transparent 700px, #c2bec4 700px, #c2bec4 885px, transparent 885px,
+	 	transparent 925px, #c2bec4 925px, #c2bec4 950px, transparent 100%);
     width: 1px;
     height: 100%;
     position: absolute;
@@ -32,7 +37,7 @@
 
 .svg-circle-top svg {
 	position: absolute;
-	left: 1px;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 }
@@ -41,6 +46,6 @@
 	width: 1200px;
 	position: relative;
 	list-style: none;
-	padding: 0 0 200px 0;
+	padding: 0 0 300px 0;
 	margin: 0;
 }

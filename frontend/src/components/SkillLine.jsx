@@ -19,8 +19,8 @@ function SkillLine ({ skillName, skillValue }) {
 						<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						 	<defs>
 						    <linearGradient id={`grad${skillNameFormatted}`} x1="0%" y1="0%" x2="100%" y2="100%">
-						      	<stop offset="0" stop-color="#361b3e" />
-						       	<stop offset="0.8" stop-color="#361b3e" />
+						      	<stop offset="0" stop-color="#5699e9" />
+						       	<stop offset="0.8" stop-color="#5699e9" />
 						    </linearGradient>
 						  	</defs>
 
@@ -30,7 +30,7 @@ function SkillLine ({ skillName, skillValue }) {
 					:
 					(<div key={`${skillName}${skillValue}empty${i}`} className="skill-circle empty">
 						<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-						<circle cx="50" cy="50" r="45" fill="#ada6b0"  stroke-width="10"/>
+						<circle cx="50" cy="50" r="45" fill="none"  stroke-width="10"/>
 						</svg>
 					</div>)))}
 			</div>
