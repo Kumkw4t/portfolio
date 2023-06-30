@@ -19,9 +19,11 @@ function Home () {
 				<div className="portrait-image">Portrait</div>
 			</div>
 			<div className="home-content-container">
-				<div className="home-title">
-					<h1>Bonjour,</h1>
-				</div>
+				{//<div className="home-title">}
+				}
+					<h1 className="home-title"><span>B</span><span>o</span><span>n</span><span>j</span><span>o</span><span>u</span><span>r</span><span>,</span></h1>
+				{//</div>}
+				}
 				<div className="home-content-text">
 					<p>I'm <span className="home-highlighted-text">Mathilde Ollivier</span>,</p>
 					<p>a <span className="home-highlighted-text">web developer</span> looking for business opportunities</p>

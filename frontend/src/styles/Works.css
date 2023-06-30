@@ -49,3 +49,9 @@
 	padding: 0 0 300px 0;
 	margin: 0;
 }
+
+@media screen and (max-width: 1024px) {
+	.workpanel-global-container:before {
+		background: linear-gradient(to bottom, transparent, transparent 10px, #c2bec4 10px, #c2bec4 90%, transparent 100%);
+	}
+}

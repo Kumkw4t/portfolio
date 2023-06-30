@@ -44,18 +44,9 @@
 	width: 100%;
 }
 
-.resume-case * {
-	font-weight: 500;
-}
-
-.resume-case h2 {
-	margin: 0 0 10px 0;
-	font-size: 30px;
-}
-
 .resume-case h3 {
-	margin: 0 0 5px 0;
-	font-weight: 500;
+	margin-bottom: 5px;
+	font-weight: 600;
 	font-size: 18px;
 	text-align: left;
 }
@@ -70,9 +61,16 @@
 }
 
 .skill-line {
-	padding-top: 2px;
+	padding: 2px 5px;
 	width: 100%;
 	justify-content: space-between;
+	transition: all ease 0.2s;
+}
+
+.skill-line:hover {
+/*	transform: scale(0.99);*/
+	background-color: rgba(243, 246, 250, 0.04);
+	border-radius: 5px;
 }
 
 .skill-line, .skill-value-case {
@@ -97,6 +95,7 @@
 .skill-circle {
 	width: 20px;
 	height: 20px;
+	opacity: 0.9;
 }
 
 .skill-circle svg {
@@ -110,10 +109,6 @@
 
 .skill-line:hover stop:last-child {
 	animation: rotateStopGrad2 3s ease infinite;
-}
-
-.skill-line:hover {
-	padding-left: 1em;
 }
 
 .education-case {

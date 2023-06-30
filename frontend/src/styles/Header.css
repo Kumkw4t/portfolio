@@ -16,9 +16,9 @@
 	transition: transform 0.5s;
 }
 
-.header-wrapper p {
-	margin: 0;
-/*	font-weight: 400;*/
+.header-wrapper * {
+	font-size: 1.1em;
+	font-weight: 400;
 }
 
 .header-logo {
@@ -32,7 +32,6 @@
 	align-items: center;
 	gap: 40px;
 	color: rgba(19, 10, 22, 1);
-	font-size: 22px;
 }
 
 .nav-element {
@@ -47,9 +46,8 @@
 	z-index: -1;
 	content: '';
 	width: 0%;
-	height: 6px;
-	bottom: 0;
-	top: 4px;
+	height: 3px;
+	bottom: 2px;
 	left: -15%;
 	right: -15%;
 	margin: auto;
@@ -62,11 +60,11 @@
 }
 
 .nav-element:hover:after {
-	width: 130%;
+	width: 120%;
 }
 
 .nav-element.selected:after {
-	width: 130%;
+	width: 120%;
 }
 
 .header-hidden-desktop {

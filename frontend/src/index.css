@@ -1,18 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital@0,400;0,500;1,400&display=swap');
+
+@import url("https://use.typekit.net/pxx8vmi.css");
+
+@font-face {
+    font-family: 'Fender';
+    src: url('./fonts/fender/fender.otf');
+}
+
+@font-face {
+    font-family: 'Vantonir';
+    src: url('./fonts/vantonir/vantonir.otf');
+}
+
+@font-face {
+    font-family: 'Bartina';
+    src: url('./fonts/bartina/bartina-regular.ttf');
+}
 
 body {
   margin: 0;
   position: relative;
+  background-color: #0e1012;
 }
 
 body * {
-  box-sizing: border-box;
-  font-family: 'Raleway',sans-serif;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-/*  outline: 1px solid red;*/
+    box-sizing: border-box;
+    font-family: 'franklin-gothic-atf', 'Hanken Grotesk', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*  outline: 1px solid red;*/
     color: #f3f6fa;
+}
+
+h1, h2 {
+    font-family: 'Vantonir', 'Bartina';
+/*    text-transform: uppercase;*/
+    font-size: 1.8em;
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
 
 code {
@@ -21,7 +51,6 @@ code {
 }
 
 main:last-child {
-/*    pointer-events: none;*/
     z-index: 1;
 }
 

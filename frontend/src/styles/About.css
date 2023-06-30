@@ -1,8 +1,11 @@
 .about-root-case {
 	position: relative;
 	padding: 150px 12% 50px 12%;
-	pointer-events: none;
 	z-index: 1;
+}
+
+.about-root-case p {
+	font-size: 1.1em;
 }
 
 .interests-root-case {
@@ -23,17 +26,95 @@
 	background-color: rgba(243, 246, 250, 0.04);
     border-radius: 8px;
     padding: 2%;
-    opacity: 0.5;
+    opacity: 0.4;
 	transform: scale(1);
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.interest-case:after {
+	content: '';
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(14,16,18, 0.4);
+}
+
+.video-games:before {
+	content: '';
+	z-index:-2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url("../../public/assets/Ori2.png");
+	background-clip: border-box;
+	background-position: left 38% top 100%;
+	background-size: 350%;
+	transition: all 0.2s ease-out;
+}
+
+.illustration:before {
+	content: '';
+	z-index:-2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url("../../public/assets/illustration.png");
+	background-clip: border-box;
+	background-position: right 30% bottom 100%;
+	background-size: 180%;
+	transition: all 0.2s ease-out;
+}
+
+.manual:before {
+	content: '';
+	z-index:-2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-image: url("../../public/assets/tricot.JPG");
+	background-clip: border-box;
+/*	background-position: right 30% bottom 100%;*/
+	background-size: cover;
+	transition: all 0.2s ease-out;
+}
+
+.interest-case.active:before {
+	transform: scale(1.15);
+	transition: all 1s ease-out;
 }
 
 .interest-case-title {
-	font-weight: 400;
 	margin: 1em 0;
+	text-align: center;
 }
 
 .interest-case.active {
 	transform: scale(1.2);
 	opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+	.interests-root-case {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.interest-case {
+		width: 100%;
+		opacity: 1;
+	}
+
+	.interest-case.active {
+		transform: none;
+	}
 }

@@ -6,7 +6,7 @@ import MenuBurger from './MenuBurger'
 
 function Header () {
 
-	const [menuOpen, setMenuOpen] = useState(true);
+	const [menuOpen, setMenuOpen] = useState(false);
 	const menuUserOpen = useRef(false);
 
  	const userToggleMenu = () => {

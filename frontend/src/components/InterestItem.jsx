@@ -15,7 +15,7 @@ function InterestItem ({item,isActive = false,handleActive}) {
 	}
 
 	return(
-		<div className={(isHover || isActive) ? "interest-case active" : "interest-case"} onMouseEnter={startHover} onMouseLeave={endHover}>
+		<div className={(isHover || isActive) ? `interest-case active ${item.tag}` : `interest-case ${item.tag}`} onMouseEnter={startHover} onMouseLeave={endHover}>
 			<h2 className="interest-case-title">{item.title}</h2>
 			<p>{item.text}</p>
 		</div>

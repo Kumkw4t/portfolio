@@ -1,5 +1,14 @@
 [
 	{
+		"name": "Cybersecurity PhD - CEA",
+		"location": "Saclay, France",
+		"date": "2017 - 2020",
+		"description": "I worked on symbolic deobfuscation and its application to malware analysis. The PhD took place in a french research lab at CEA focusing on formal methods. I developped obfuscations method robust against symbolic analysis using C, Ocaml and python.",
+		"links": [
+			{ "title": "ACSAC 2019 article", "url": "https://dl.acm.org/doi/10.1145/3359789.3359812" }
+		]
+	},
+	{
 		"name": "Freelance Graphic Design",
 		"location": "International clients",
 		"date": "2021 - 2023",
@@ -7,15 +16,6 @@
 		"links": [
 			{ "title": "Esty shop", "url": "https://www.etsy.com/shop/Kumkw4tDesigns" },
 			{ "title": "Behance", "url": "https://www.behance.net/mathjunk" }
-		]
-	},
-	{
-		"name": "Cybersecurity PhD - CEA",
-		"location": "Saclay, France",
-		"date": "2017 - 2020",
-		"description": "I worked on symbolic deobfuscation and its application to malware analysis. The PhD took place in a french research lab at CEA focusing on formal methods. I developped obfuscations method robust against symbolic analysis using C, Ocaml and python.",
-		"links": [
-			{ "title": "ACSAC 2019 article", "url": "https://dl.acm.org/doi/10.1145/3359789.3359812" }
 		]
 	},
 	{
