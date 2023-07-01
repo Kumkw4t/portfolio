@@ -21,10 +21,6 @@
 	font-weight: 400;
 }
 
-.header-logo {
-	color: rgba(144, 197, 38, 1);
-}
-
 .nav-wrapper {
 	padding: 0 50px;
 	display: flex;
@@ -75,13 +71,8 @@
 
 @media screen and (max-width: 768px) {
 	.nav-wrapper {
-		font-size: 18px;
 		padding: 0 20px;
 		gap: 25px;
-	}
-
-	.nav-element:after {
-		top: 3px;
 	}
 }
 
@@ -92,7 +83,7 @@
 	}
 
 	.nav-wrapper {
-		font-size: 18px;
+		font-size: 0.9em;
 		padding: 0;
 		gap: 10px;
 	}

@@ -1,9 +1,12 @@
 .work-dialog {
 	border: none;
-	border-radius: 15px;
+	border-radius: 8px;
 	padding: 0;
+	width: 60%;
 	max-height: 80vh;
 	pointer-events: auto;
+	background-color: rgba(14,16,18, 0.8);
+	border: none;
 }
 
 .work-dialog::backdrop {
@@ -15,6 +18,31 @@
 	width: 100%;
 	height: 100%;
 	padding: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+.cross-modal {
+	align-self: flex-end;
+	display: flex;
+	height: 40px;
+	width: 40px;
+	padding: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease-out;
+}
+
+.cross-modal:hover {
+	background-color: rgba(243, 246, 250, 0.06);
+}
+
+.cross-modal-svg {
+	height: 100%;
+}
+
+.cross-modal-svg path {
+	stroke: #f3f6fa;
 }
 
 .work-dialog-header {
@@ -23,20 +51,46 @@
 	justify-content: center;
 	align-items: center;
 	gap: 5%;
+	position: relative;
 }
 
-.work-dialog-header-text ul {
+.work-dialog-header-img {
+	max-width: 45%;
+	flex-grow: 2;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(243, 246, 250, 0.06);
+	padding: 30px 0;
+}
+
+.work-dialog-header-img img {
+	max-width: 100%;
+	max-height: 400px;
+	width:auto;
+	height: auto;
+/*	aspect-ratio: 4 / 5;*/
+}
+
+.dialog-work-year {
+	margin-bottom: 1em;
+}
+
+.skill-tags {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 10px;
 	list-style: none;
+	margin-top: 2em;
+	padding: 0;
 }
 
-.work-dialog-header-text li {
+.skill-tags li {
 	border-radius: 20px;
-	border: 1px solid rgba(19, 10, 22, 1);
-	padding: 0.2em 0.5em;
+	border: 1px solid rgba(243, 246, 250, 0.5);
+	background-color: rgba(243, 246, 250, 0.05);
+	padding: 0.2em 0.5em 0.3em 0.5em;
 }
 
 .work-dialog-images-grid {
@@ -49,6 +103,7 @@
 }
 
 .work-dialog-images-grid-item {
+	position: relative;
 	padding: 5px 10px;
 	display: flex;
 	justify-content: center;
@@ -58,4 +113,9 @@
 
 .images-grid-item__large {
 	grid-column: span 2;
+}
+
+.work-dialog-images-grid-item video {
+	max-width: 100%;
+	height: auto;
 }

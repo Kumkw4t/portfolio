@@ -1,6 +1,7 @@
 .about-root-case {
 	position: relative;
-	padding: 150px 12% 50px 12%;
+	padding: 120px 12% 50px 12%;
+	min-height: calc(100vh - 80px);
 	z-index: 1;
 }
 
@@ -13,19 +14,20 @@
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 5%;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .interest-case {
-	pointer-events: auto;
+	position: relative;
 	display: flex;
 	flex-direction: column;
+	gap: 1em;
 	justify-content: center;
 	align-items: center;
 	width: 30%;
 	background-color: rgba(243, 246, 250, 0.04);
     border-radius: 8px;
-    padding: 2%;
+    padding: 2.5em 2% 2em 2%;
     opacity: 0.4;
 	transform: scale(1);
     transition: all 0.2s ease-in-out;
@@ -51,10 +53,9 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-image: url("../../public/assets/Ori2.png");
+	background-image: url("../../public/assets/Ori22.png");
 	background-clip: border-box;
-	background-position: left 38% top 100%;
-	background-size: 350%;
+	background-size: auto 100%;
 	transition: all 0.2s ease-out;
 }
 
@@ -66,10 +67,9 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-image: url("../../public/assets/illustration.png");
+	background-image: url("../../public/assets/illustration2.png");
 	background-clip: border-box;
-	background-position: right 30% bottom 100%;
-	background-size: 180%;
+	background-size: auto 100%;
 	transition: all 0.2s ease-out;
 }
 
@@ -81,10 +81,9 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-image: url("../../public/assets/tricot.JPG");
+	background-image: url("../../public/assets/tricot2.png");
 	background-clip: border-box;
-/*	background-position: right 30% bottom 100%;*/
-	background-size: cover;
+	background-size: auto 100%;
 	transition: all 0.2s ease-out;
 }
 
@@ -94,7 +93,6 @@
 }
 
 .interest-case-title {
-	margin: 1em 0;
 	text-align: center;
 }
 
@@ -116,5 +114,9 @@
 
 	.interest-case.active {
 		transform: none;
+	}
+
+	.video-games:before, .illustration:before, .manual:before {
+		background-size: 100% auto;
 	}
 }

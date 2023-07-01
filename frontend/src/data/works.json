@@ -5,13 +5,14 @@
 		"title": "Booki",
 		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development of a travel agency frontpage",
+		"description": "Frontend development of a travel agency static frontpage",
 		"logo" : "../assets/booki/logo.png",
 		"skills": [
 			"HTML",
 			"CSS",
 			"School project"
 		],
+		"mockup" : "../assets/booki/mockup.png",
 		"pictures": [
 			"image1",
 			"image2",
@@ -39,7 +40,7 @@
 		"title": "Kasa",
 		"cover_img": "../assets/kasa/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development for a house rental agency website",
+		"description": "Frontend development for a house rental agency website using React and CSS",
 		"logo" : "../assets/kasa/logo.svg",
 		"skills": [
 			"HTML",
@@ -47,6 +48,7 @@
 			"React",
 			"School project"
 		],
+		"mockup" : "../assets/kasa/mockup.png",
 		"pictures": [
 			"image1",
 			"image2",
@@ -55,7 +57,7 @@
 			"image5"
 		],
 		"videos": [
-			"",
+			"../assets/kasa/carousel.webm",
 			""
 		],
 		"year" : "2023",

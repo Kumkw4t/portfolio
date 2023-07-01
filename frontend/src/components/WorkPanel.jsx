@@ -28,6 +28,18 @@ function WorkPanel ( {workId, isEven}) {
 	    };
 	}, mousePosition);
 
+	useEffect( () => {
+		const video = document.getElementById(`${workId}0`);
+  			if (video) {
+  				try {
+  					video.play();
+  				} catch (error)
+  				{
+  					console.error(error);
+  				}
+  			}
+	},[]);
+
 	function openModal () {
 		dialog.current.showModal();
 		document.body.style.overflow = "hidden";
@@ -61,22 +73,37 @@ function WorkPanel ( {workId, isEven}) {
 
 		<dialog id={`dialog${workId}`} className="work-dialog" close="true" onClick={closeModal}>
 			<div className="inside-dialog" onClick={(event) => (event.stopPropagation())} >
-			<button onClick={closeModal}>Return</button>
+			<div className="cross-modal" onClick={closeModal}>
+				<svg className="cross-modal-svg" width="70" height="50" viewBox="0 0 70 50">
+					<path d="M 20 40 L 50 10" stroke-width="5" stroke-linecap="round" />
+					<path d="M 20 10 L 50 40" stroke-width="5" stroke-linecap="round" />
+				</svg>
+			</div>
 			<div className="work-dialog-header">
-				<div className="work-dialog-header-img"><p>Image présentation - mockups</p></div>
+				<div className="work-dialog-header-img">
+					<img src={work.mockup} alt="mockup" height="400" width="320"/>
+				</div>
 				<div className="work-dialog-header-text">
-					<h4>{work.title}</h4>
-					<p>{work.year}</p>
-					<p>{work.description}</p>
-					<ul>
+					<h4 className="dialog-work-title">{work.title}</h4>
+					<p className="dialog-work-year">{work.year}</p>
+					<p className="dialog-work-description">{work.description}</p>
+					<ul className="skill-tags">
 					{work.skills.map( (skill) => (<li key={`${workId}-${skill}`}>{skill}</li>))}
 					</ul>
 				</div>
 			</div>
 			<div className="work-dialog-images-grid">
+				{
+					work.videos[0] !== "" &&
+					<div key={`${workId}-video0`} className="work-dialog-images-grid-item images-grid-item__large">
+						<video id={`${workId}0`} src={work.videos[0]} loop muted playsinline alt="WebM Animation" height="720" width="1280" />
+	  				</div>
+  				}
 				{work.pictures.map( (img, index) => (
-					( index%4 === 0 || index%4 === 3) ? 
-					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__large"><p>Images supplémentaires {`${index+1}`}</p></div>)
+					( index%4 === 2 || index%4 === 3) ? 
+					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__large">
+						<p>Images supplémentaires {`${index+1}`}</p>
+  					</div>)
 					:
 					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
 				))}
