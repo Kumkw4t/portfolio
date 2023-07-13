@@ -6,7 +6,7 @@ import {Pt, Create, Util, Group, Particle, Num} from "pts";
 function Background ({children}) {
 
 	let local_pointer = new Pt(0,0);
-	let particles = new Group();
+	let stars = new Group();
 	const colors = ['#5699e9','#7c85e8','#9478e7','#b268e6','#cf59e6'];
 
 	class Star extends Pt {
@@ -14,6 +14,11 @@ function Background ({children}) {
 			radius = Num.randomRange(0,1.5);
 			offsetRadius = Num.randomRange(1,5000);
 			offsetSpeed = Num.randomRange(1,5);
+
+			constructor(point) {
+				super(point);
+				this.origin = point;
+			}
 	}
 
 	useEffect(() => {
@@ -29,15 +34,18 @@ function Background ({children}) {
 	});
 
 	const handleStart: HandleStartFn = (_bound, space, form) => {
-		console.log(space.size);
-		console.log(space.width + ' ' + space.height);
 		const points = Create.distributeRandom(space.innerBound,(space.width*space.height*0.00018));
-		particles = Group.fromPtArray(points.map( (pt) => (new Star(pt))));
+		stars = Group.fromPtArray(points.map( (pt) => (new Star(pt))));
 	}
 
 	const handleAnimate: HandleAnimateFn = (space, form, time, ftime) => {
 		// form.point(local_pointer, (time%1000)/1000*20, 'circle');
-		particles.map( (particle) => (form.fillOnly(particle.color).point(particle,1+particle.radius*Num.cycle((time+particle.offsetRadius)%2000/2000), 'circle')));
+		stars.sort( (a,b) => (a.$subtract(local_pointer).magnitudeSq() - b.$subtract(local_pointer).magnitudeSq()) );
+		let close_stars = stars.slice(0, 15);
+		let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply(time%5000/5000)));
+		// console.log(close_move);
+		form.fillOnly('#fff').points(close_move, 3, 'circle');
+		stars.map( (star, index) => ( index < 15 ? '' : form.fillOnly(star.color).point(star,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
 	}
 
 	return (
