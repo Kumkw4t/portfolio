@@ -14,6 +14,9 @@ function Background ({children}) {
 			radius = Num.randomRange(0,1.5);
 			offsetRadius = Num.randomRange(1,5000);
 			offsetSpeed = Num.randomRange(1,5);
+			startTime = 0;
+			endTime = 0;
+			endPos = null;
 
 			constructor(point) {
 				super(point);
@@ -33,16 +36,46 @@ function Background ({children}) {
 	    };
 	});
 
+	function startMoving (star,time) {
+		if (star.startTime === 0) {
+			star.startTime = time;
+			star.endTime = 0;
+			star.endPos = null;
+		}
+		return;
+	}
+
+	function endMoving (star,time) {
+		if (star.startTime !== 0) {
+			star.startTime = 0;
+			star.endTime = time;
+			star.endPos = star;
+		}
+		return;
+	}
+
+	function timeCycle (time) {
+		const expResult = Math.pow(0.004*time/(1+0.004*time),2);
+		if (expResult < 0.9) {
+			return expResult;
+		}
+
+		return (0.004*time/(1+0.004*time));
+	}
+
 	const handleStart: HandleStartFn = (_bound, space, form) => {
 		const points = Create.distributeRandom(space.innerBound,(space.width*space.height*0.00018));
 		stars = Group.fromPtArray(points.map( (pt) => (new Star(pt))));
 	}
 
 	const handleAnimate: HandleAnimateFn = (space, form, time, ftime) => {
-		// form.point(local_pointer, (time%1000)/1000*20, 'circle');
 		stars.sort( (a,b) => (a.$subtract(local_pointer).magnitudeSq() - b.$subtract(local_pointer).magnitudeSq()) );
 		let close_stars = stars.slice(0, 15);
-		let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply(time%5000/5000)));
+		let far_stars = stars.slice(15);
+		close_stars.forEach(star => startMoving(star, time));
+		far_stars.forEach(star => endMoving(star, time));
+		// let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply((time-star.startTime)%5000/5000)));
+		let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply(timeCycle(time-star.startTime))));
 		// console.log(close_move);
 		form.fillOnly('#fff').points(close_move, 3, 'circle');
 		stars.map( (star, index) => ( index < 15 ? '' : form.fillOnly(star.color).point(star,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
