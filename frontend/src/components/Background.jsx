@@ -55,12 +55,11 @@ function Background ({children}) {
 	}
 
 	function timeCycle (time) {
-		const expResult = Math.pow(0.004*time/(1+0.004*time),2);
-		if (expResult < 0.9) {
+		const expResult = Math.pow(0.004*time/(1+0.004*time),2)*1.11;
+		if (expResult < 1) {
 			return expResult;
 		}
-
-		return (0.004*time/(1+0.004*time));
+		return 1;
 	}
 
 	const handleStart: HandleStartFn = (_bound, space, form) => {
