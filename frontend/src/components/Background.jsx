@@ -78,6 +78,7 @@ function Background ({children}) {
 		// console.log(close_move);
 		form.fillOnly('#fff').points(close_move, 3, 'circle');
 		stars.map( (star, index) => ( index < 15 ? '' : form.fillOnly(star.color).point(star,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
+		// console.log(stars);
 	}
 
 	return (

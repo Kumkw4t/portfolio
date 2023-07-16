@@ -1,12 +1,9 @@
 import '../styles/About.css';
 import {useEffect, useState } from 'react';
-import InterestItem from '../components/InterestItem';
+import InterestBox from '../components/InterestBox';
 import Background from '../components/Background';
-import interestsList from '../data/interests.json';
 
 function About () {
-
-	const [defActive,setDefActive] = useState(true);
 
 	useEffect( () => {
 		const currentPage = document.getElementById("nav-about");
@@ -25,11 +22,13 @@ function About () {
 			Creative web development nourish my love for graphic design and offers numerous opportunities to create innovative things.
 			I hope over the years I'll be able to work on plenty amazing projects. Let's start together !</p>
 			</div>
-			<div className="interests-root-case">
+			<InterestBox />
+			{/*
+			<div className="interests-root-case" onClick={testFun}>
 				<InterestItem key="interest1" item={interestsList[0]} handleActive={setDefActive} />
 				<InterestItem key="interest2" item={interestsList[1]} isActive={defActive} handleActive={setDefActive} />
-				<InterestItem key="interest3" item={interestsList[2]} handleActive={setDefActive} />
-			</div>
+				<InterestItem key="interest3" item={interestsList[2]} handleActive={setDefActive}/>
+			</div>*/}
 		</div>
 		</Background>
 	);
