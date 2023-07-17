@@ -96,16 +96,20 @@ function WorkPanel ( {workId, isEven}) {
 				{
 					work.videos[0] !== "" &&
 					<div key={`${workId}-video0`} className="work-dialog-images-grid-item images-grid-item__large">
-						<video id={`${workId}0`} src={work.videos[0]} loop muted playsinline alt="WebM Animation" height="720" width="1280" />
+						<video id={`${workId}0`} src={work.videos[0]} loop muted playsinline alt="WebM Animation" height="360" width="640" />
 	  				</div>
   				}
 				{work.pictures.map( (img, index) => (
 					( index%4 === 2 || index%4 === 3) ? 
 					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__large">
-						<p>Images supplémentaires {`${index+1}`}</p>
+						{/*<p>Images supplémentaires {`${index+1}`}</p>*/}
+						<img src={work.pictures[index]} alt="" />
   					</div>)
 					:
-					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__small"><p>Images supplémentaires {`${index+1}`}</p></div>)
+					(<div key={`${workId}-img${index}`} className="work-dialog-images-grid-item images-grid-item__small">
+						{/*<p>Images supplémentaires {`${index+1}`}</p>*/}
+						<img src={work.pictures[index]} alt="" />
+					</div>)
 				))}
 			</div>
 			</div>

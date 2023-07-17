@@ -5,7 +5,7 @@
 		"title": "Booki",
 		"cover_img": "../assets/booki/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development of a travel agency static frontpage",
+		"description": "Frontend development of a travel agency static frontpage. I implemented the CSS and HTML code from a sigma web design. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/booki/logo.png",
 		"skills": [
 			"HTML",
@@ -40,7 +40,7 @@
 		"title": "Kasa",
 		"cover_img": "../assets/kasa/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development for a house rental agency website using React and CSS",
+		"description": "Frontend development for a house rental agency website using React and CSS. I implemented the react and CSS code from a figma web design. I used create-react-app to setup the react environment. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/kasa/logo.svg",
 		"skills": [
 			"HTML",
@@ -50,14 +50,14 @@
 		],
 		"mockup" : "../assets/kasa/mockup.png",
 		"pictures": [
-			"image1",
-			"image2",
-			"image3",
+			"../assets/kasa/about.webp",
+			"../assets/kasa/mobile.webp",
+			"../assets/kasa/id_page.webp",
 			"image4",
 			"image5"
 		],
 		"videos": [
-			"../assets/kasa/carousel.webm",
+			"../assets/kasa/video1.webm",
 			""
 		],
 		"year" : "2023",
@@ -76,7 +76,7 @@
 		"title": "Mon vieux grimoire",
 		"cover_img": "../assets/grimoire/thumbnail.png",
 		"cover_video": "",
-		"description": "Backend development for a books rating website",
+		"description": "Backend development for a books rating website. The frontend was already implemented for this project. I created the database with MongoDB and implemented all the routes with NodeJS and Express from the API guidelines of the website. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/grimoire/logo.png",
 		"skills": [
 			"NodeJS",
@@ -112,12 +112,13 @@
 		"title": "Photograph's website",
 		"cover_img": "/assets/architecte/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development for a photograph's website",
+		"description": "Frontend development for a photograph's website. The static code and backend were already implemented. I had to add the dynamic interactions using native javascript. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/architecte/logo.png",
 		"skills": [
 			"HTML",
 			"CSS",
 			"Responsive",
+			"Native JS",
 			"School project"
 		],
 		"pictures": [
