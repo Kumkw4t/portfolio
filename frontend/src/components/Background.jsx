@@ -16,11 +16,13 @@ function Background ({children}) {
 			offsetSpeed = Num.randomRange(1,5);
 			startTime = 0;
 			endTime = 0;
-			endPos = null;
 
 			constructor(point) {
 				super(point);
 				this.origin = point;
+				this.startPos = point;
+				this.endPos = point;
+				this.curPos = point;
 			}
 	}
 
@@ -40,7 +42,8 @@ function Background ({children}) {
 		if (star.startTime === 0) {
 			star.startTime = time;
 			star.endTime = 0;
-			star.endPos = null;
+			star.startPos = star.curPos;
+			star.endPos = star.origin;
 		}
 		return;
 	}
@@ -49,8 +52,18 @@ function Background ({children}) {
 		if (star.startTime !== 0) {
 			star.startTime = 0;
 			star.endTime = time;
-			star.endPos = star;
+			star.endPos = star.curPos;
 		}
+		return;
+	}
+
+	function move (star,time) {
+		star.curPos = star.startPos.$add(local_pointer.$subtract(star.startPos).$multiply(timeCycle(time-star.startTime)));
+		return;
+	}
+
+	function moveBack (star,time) {
+		star.curPos = star.endPos.$add(star.origin.$subtract(star.endPos).$multiply(timeCycle(time-star.endTime)));
 		return;
 	}
 
@@ -63,22 +76,22 @@ function Background ({children}) {
 	}
 
 	const handleStart: HandleStartFn = (_bound, space, form) => {
-		const points = Create.distributeRandom(space.innerBound,(space.width*space.height*0.00018));
+		const points = Create.distributeRandom(space.innerBound,(space.width*space.height*0.00035));
 		stars = Group.fromPtArray(points.map( (pt) => (new Star(pt))));
 	}
 
 	const handleAnimate: HandleAnimateFn = (space, form, time, ftime) => {
 		stars.sort( (a,b) => (a.$subtract(local_pointer).magnitudeSq() - b.$subtract(local_pointer).magnitudeSq()) );
-		let close_stars = stars.slice(0, 15);
-		let far_stars = stars.slice(15);
+		let close_stars = stars.slice(0, 35);
+		let far_stars = stars.slice(35);
+
 		close_stars.forEach(star => startMoving(star, time));
 		far_stars.forEach(star => endMoving(star, time));
-		// let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply((time-star.startTime)%5000/5000)));
-		let close_move = close_stars.map(star => star.origin.$add(local_pointer.$subtract(star.origin).$multiply(timeCycle(time-star.startTime))));
-		// console.log(close_move);
-		form.fillOnly('#fff').points(close_move, 3, 'circle');
-		stars.map( (star, index) => ( index < 15 ? '' : form.fillOnly(star.color).point(star,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
-		// console.log(stars);
+		close_stars.forEach(star => move(star,time));
+		far_stars.forEach(star => moveBack(star,time));
+
+		close_stars.map( star => (form.fillOnly(star.color).point(star.curPos,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
+		far_stars.map( (star) => (form.fillOnly(star.color).point(star.curPos,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
 	}
 
 	return (

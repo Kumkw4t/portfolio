@@ -41,35 +41,35 @@
 }
 
 .home-title span:nth-child(1) {
-    animation: bounceInText 0.6s forwards;
+    animation: bounceInText 0.6s 0.6s forwards;
 }
 
 .home-title span:nth-child(2) {
-    animation: bounceInText 0.6s 0.05s forwards;
+    animation: bounceInText 0.6s 0.65s forwards;
 }
 
 .home-title span:nth-child(3) {
-    animation: bounceInText 0.6s 0.1s forwards;
+    animation: bounceInText 0.6s 0.7s forwards;
 }
 
 .home-title span:nth-child(4) {
-    animation: bounceInText 0.6s 0.15s forwards;
+    animation: bounceInText 0.6s 0.75s forwards;
 }
 
 .home-title span:nth-child(5) {
-    animation: bounceInText 0.6s 0.2s forwards;
+    animation: bounceInText 0.6s 0.8s forwards;
 }
 
 .home-title span:nth-child(6) {
-    animation: bounceInText 0.6s 0.25s forwards;
+    animation: bounceInText 0.6s 0.85s forwards;
 }
 
 .home-title span:nth-child(7) {
-    animation: bounceInText 0.6s 0.3s forwards;
+    animation: bounceInText 0.6s 0.9s forwards;
 }
 
 .home-title span:nth-child(8) {
-    animation: bounceInText 0.6s 0.35s forwards;
+    animation: bounceInText 0.6s 0.95s forwards;
 }
 
 .home-content-text {
@@ -85,11 +85,11 @@
 }
 
 .home-content-text p:nth-child(1) {
-	animation: fadeInRight ease-out 1s 1s forwards;
+	animation: fadeInRight ease-out 1s 1.3s forwards;
 }
 
 .home-content-text p:nth-child(2) {
-	animation: fadeInRight ease-out 1s 1.5s forwards;
+	animation: fadeInRight ease-out 1s 1.8s forwards;
 }
 
 .home-content-text span {
