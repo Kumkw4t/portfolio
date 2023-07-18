@@ -86,6 +86,7 @@ function WorkPanel ( {workId, isEven}) {
 				<div className="work-dialog-header-text">
 					<h4 className="dialog-work-title">{work.title}</h4>
 					<p className="dialog-work-year">{work.year}</p>
+					{work.url !== "" ? (<a href={work.url} target="_blank" className="work-url"><span>Visit</span><img src="./arrow.png" className="dialog-link-arrow" alt="arrow" /></a>) : ''}
 					<p className="dialog-work-description">{work.description}</p>
 					<ul className="skill-tags">
 					{work.skills.map( (skill) => (<li key={`${workId}-${skill}`}>{skill}</li>))}

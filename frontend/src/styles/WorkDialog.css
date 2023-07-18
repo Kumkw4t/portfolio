@@ -70,10 +70,41 @@
 
 .work-dialog-header-text {
 	flex-shrink: 3;
+	position: relative;
 }
 
 .dialog-work-year {
 	margin-bottom: 1em;
+}
+
+.work-url {
+	position: absolute;
+	right: 10%;
+	top: 0;
+	width: 95px;
+	text-decoration: none;
+	padding: 0.3em 0;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	border: 1px solid rgba(243, 246, 250, 0.8);
+	background-color: rgba(243, 246, 250, 0.05);
+}
+
+.dialog-link-arrow {
+	height: 18px;
+	transform: rotate(-90deg);
+}
+
+.work-url:hover {
+	background-color: rgba(243, 246, 250, 0.15);
+}
+
+.work-url:hover .dialog-link-arrow {
+	animation: bounceRight 0.8s infinite ;
 }
 
 .skill-tags {
@@ -125,4 +156,50 @@
 .work-dialog-images-grid-item video {
 	max-width: 100%;
 	height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+	.work-url {
+		position: static;
+		margin-bottom: 1em;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.work-dialog {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.work-dialog-header {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.work-dialog-images-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.images-grid-item__large {
+		grid-column: span 1;
+	}
+}
+
+
+@keyframes bounceRight {
+	from {
+		animation-timing-function: ease-out;
+		transform: rotate(-90deg) translateY(0);
+	}
+
+	50% {
+		animation-timing-function: ease-in;
+		transform: rotate(-90deg) translateY(5px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: rotate(-90deg) translateY(0);
+	}
 }
