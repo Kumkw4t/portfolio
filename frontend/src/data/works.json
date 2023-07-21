@@ -52,9 +52,7 @@
 		"pictures": [
 			"../assets/kasa/about.webp",
 			"../assets/kasa/mobile.webp",
-			"../assets/kasa/id_page.webp",
-			"image4",
-			"image5"
+			"../assets/kasa/id_page.webp"
 		],
 		"videos": [
 			"../assets/kasa/video1.webm",
