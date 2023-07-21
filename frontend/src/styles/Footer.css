@@ -10,11 +10,12 @@
 	gap: 5%;
 }
 
-.footer-item {	height: 35px;
+.footer-item {
+	height: 35px;
 }
 
 .footer-item .logo {
-	width: 100%;
+	width: auto;
 	height: 100%;
 }
 
