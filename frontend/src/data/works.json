@@ -14,15 +14,12 @@
 		],
 		"mockup" : "../assets/booki/mockup.png",
 		"pictures": [
-			"image1",
-			"image2",
-			"image3",
-			"image4",
-			"image5"
+			"../assets/booki/picture1.webp",
+			"../assets/booki/picture2.webp",
+			"../assets/booki/picture3.webp"
 		],
 		"videos": [
-			"",
-			""
+			"../assets/booki/video1.webm"
 		],
 		"year" : "2023",
 		"texts": [
@@ -55,8 +52,7 @@
 			"../assets/kasa/id_page.webp"
 		],
 		"videos": [
-			"../assets/kasa/video1.webm",
-			""
+			"../assets/kasa/video1.webm"
 		],
 		"year" : "2023",
 		"texts": [
