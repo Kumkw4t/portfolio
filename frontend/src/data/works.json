@@ -68,9 +68,9 @@
 		"id": "2495ce5c",
 		"category": "backend",
 		"title": "Mon vieux grimoire",
-		"cover_img": "../assets/grimoire/thumbnail.png",
+		"cover_img": "../assets/grimoire/thumbnail.webp",
 		"cover_video": "",
-		"description": "Backend development for a books rating website. The frontend was already implemented for this project. I created the database with MongoDB and implemented all the routes with NodeJS and Express from the API guidelines of the website. This project was completed as part of my course at OpenClassroom.",
+		"description": "Backend development for a books rating website. The frontend was already implemented for this project. I created the database with MongoDB and implemented all the routes with NodeJS and Express from the API guidelines of the website. Features include login with user unicity, get books from database, create, modify and delete books, notation (and average note). Some security was integrated such as sanitize data to prevent injection, enforce password security and crypt and salt passwords before storage. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/grimoire/logo.png",
 		"skills": [
 			"NodeJS",
@@ -79,16 +79,16 @@
 			"Server security",
 			"School project"
 		],
+		"mockup" : "../assets/grimoire/mockup.webp",
 		"pictures": [
-			"image1",
-			"image2",
-			"image3",
-			"image4",
-			"image5"
+			"../assets/grimoire/picture1.webp",
+			"../assets/grimoire/picture2.webp",
+			"../assets/grimoire/picture3.webp",
+			"../assets/grimoire/picture4.webp",
+			"../assets/grimoire/picture5.webp"
 		],
 		"videos": [
-			"",
-			""
+			"../assets/grimoire/video1.webm"
 		],
 		"year" : "2023",
 		"texts": [
@@ -103,10 +103,10 @@
 	{
 		"id": "d6b8ba97",
 		"category": "frontend",
-		"title": "Photograph's website",
+		"title": "Interior Dedisgner's Website",
 		"cover_img": "/assets/architecte/thumbnail.png",
 		"cover_video": "",
-		"description": "Frontend development for a photograph's website. The static code and backend were already implemented. I had to add the dynamic interactions using native javascript. This project was completed as part of my course at OpenClassroom.",
+		"description": "Frontend development for an interior designer's website. The static code and backend were already implemented. I had to add the dynamic interactions using native javascript. Three major features were added: a login page; a dynamic filter to select projects's category on the main page; and a modal to add or remove a project from the gallery. This project was completed as part of my course at OpenClassroom.",
 		"logo" : "../assets/architecte/logo.png",
 		"skills": [
 			"HTML",
@@ -115,16 +115,16 @@
 			"Native JS",
 			"School project"
 		],
+		"mockup" : "../assets/architecte/mockup.webp",
 		"pictures": [
-			"image1",
-			"image2",
-			"image3",
-			"image4",
-			"image5"
+			"../assets/architecte/picture1.webp",
+			"../assets/architecte/picture2.webp",
+			"../assets/architecte/picture3.webp",
+			"../assets/architecte/picture4.webp",
+			"../assets/architecte/picture5.webp"
 		],
 		"videos": [
-			"",
-			""
+			"../assets/architecte/video1.webm"
 		],
 		"year" : "2023",
 		"texts": [
