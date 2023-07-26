@@ -26,6 +26,7 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+    justify-content: center;
 	gap: 40px;
 	color: rgba(19, 10, 22, 1);
 }
@@ -128,25 +129,51 @@
 
 @media screen and (max-width: 768px) {
 	.nav-wrapper {
-		padding: 0 20px;
+		padding: 0;
 		gap: 25px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.header-wrapper {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"name contact"
+			"nav nav";
+		justify-content: center;
+	}
+
+	.nav-name {
+		grid-area: name;
+	}
+	.nav-contact {
+		grid-area: contact;
+		justify-self: end;
+		padding: 0.2em 0.6em;
+		margin-top: 0.2em;
+	}
+
+	.nav-wrapper {
+		gap: unset;
+		grid-area: nav;
+   		justify-content: space-between;
+	}
+
+	.email-clicked {
+		top: 70px;
+		right: 5px;
 	}
 }
 
 @media screen and (max-width: 425px) {
 	.header-wrapper {
 		left: 0;
-		padding-right: 5px;
 	}
 
-	.nav-wrapper {
+	.nav-wrapper, .nav-name, .nav-contact {
 		font-size: 0.9em;
-		padding: 0;
-		gap: 10px;
-	}
-
-	.nav-burger {
-		left: 10px;
 	}
 
 	.nav-element:hover:after {

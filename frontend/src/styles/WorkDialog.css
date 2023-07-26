@@ -164,6 +164,10 @@
 		position: static;
 		margin-bottom: 1em;
 	}
+
+	.work-dialog {
+		width: 90%;
+	}
 }
 
 @media screen and (max-width: 768px) {

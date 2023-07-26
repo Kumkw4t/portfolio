@@ -9,8 +9,9 @@
 .exp-case:hover {
 	animation: border-gradient 4s ease infinite;
 	background-color: rgba(243, 246, 250, 0.04);
+/*	border-radius: 5px;*/
 	border-radius: 0 5px 5px 0;
-	margin-left: 2em;
+/*	margin-left: 2em;*/
 }
 
 .exp-case:before {
@@ -19,7 +20,7 @@
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 3px;
+	width: 1px;
 	background: #5699e9;
 	background-size: 100% 400%;
 }

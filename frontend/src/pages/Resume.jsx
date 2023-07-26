@@ -30,7 +30,7 @@ function Resume () {
 			<div className="resume-case skills-case">
 				<h2>Skills</h2>
 				<div className="hard-skills subskill-case">
-					<h3>Hard Skills</h3>
+					<h3 className="blue-color">Hard Skills</h3>
 					<SkillLine skillName="CSS/SCSS" skillValue="4" />
 					<SkillLine skillName="HTML" skillValue="4" />
 					<SkillLine skillName="JS" skillValue="3" />
@@ -40,7 +40,7 @@ function Resume () {
 					<SkillLine skillName="CyberSecurity" skillValue="4" />
 				</div>
 				<div className="soft-skills subskill-case">
-					<h3>Soft Skills</h3>
+					<h3 className="blue-color">Soft Skills</h3>
 					<div className="skill-line">
 						<h4 className="skill-name">Adaptability</h4>
 					</div>
@@ -58,7 +58,7 @@ function Resume () {
 					</div>
 				</div>
 				<div className="languages subskill-case">
-					<h3>Languages</h3>
+					<h3 className="blue-color">Languages</h3>
 					<SkillLine skillName="French" skillValue="5" />
 					<SkillLine skillName="English" skillValue="5" />
 				</div>

@@ -1,6 +1,6 @@
 import '../styles/Background.css';
 import {useEffect} from 'react';
-import { PtsCanvas, HandleAnimateFn, HandleStartFn, HandleActionFn } from "react-pts-canvas";
+import { PtsCanvas, HandleAnimateFn, HandleStartFn, HandleResizeFn } from "react-pts-canvas";
 import {Pt, Create, Util, Group, Particle, Num} from "pts";
 
 function Background ({children}) {
@@ -92,6 +92,11 @@ function Background ({children}) {
 
 		close_stars.map( star => (form.fillOnly(star.color).point(star.curPos,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
 		far_stars.map( (star) => (form.fillOnly(star.color).point(star.curPos,0.5+star.radius*Num.cycle((time+star.offsetRadius)%2000/2000), 'circle')));
+	}
+
+	const handleResize: HandleResizeFn = (space, form, size, evt) => {
+		const pointsResize = Create.distributeRandom(space.innerBound,(space.width*space.height*0.00035));
+		stars = Group.fromPtArray(pointsResize.map( (pt) => (new Star(pt))));
 	}
 
 	return (

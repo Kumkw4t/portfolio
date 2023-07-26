@@ -3,7 +3,7 @@ import '../styles/ExperienceItem.css';
 function ExperienceItem ({exItem}) {
 	return(
 		<div className="exp-case">
-			<h3 className="exp-title">{`${exItem.date} | ${exItem.name}`}</h3>
+			<h3 className="exp-title blue-color">{`${exItem.date} ⁞ ${exItem.name}`}</h3>
 			<h4 className="exp-location">{exItem.location}</h4>
 			<p className="exp-description">{exItem.description}</p>
 			{exItem.links &&

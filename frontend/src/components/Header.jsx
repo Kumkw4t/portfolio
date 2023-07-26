@@ -2,18 +2,18 @@ import '../styles/Header.css';
 import {useState, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 
-import MenuBurger from './MenuBurger'
+// import MenuBurger from './MenuBurger'
 
 function Header () {
 
-	const [menuOpen, setMenuOpen] = useState(false);
+	// const [menuOpen, setMenuOpen] = useState(false);
 	const [contact, setContact] = useState(false);
-	const menuUserOpen = useRef(false);
+	// const menuUserOpen = useRef(false);
 
- 	const userToggleMenu = () => {
-    	menuUserOpen.current = !menuOpen;
-    	setMenuOpen(!menuOpen);
-  	};
+ 	// const userToggleMenu = () => {
+    // 	menuUserOpen.current = !menuOpen;
+    // 	setMenuOpen(!menuOpen);
+  	// };
 
 	function handleContact () {
 		console.log("clicked");
