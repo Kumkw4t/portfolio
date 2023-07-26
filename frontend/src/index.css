@@ -16,6 +16,12 @@
     src: url('./fonts/bartina/bartina-regular.ttf');
 }
 
+@font-face {
+    font-family: 'Thisjuly';
+    src: url('./fonts/thisjuly/ThisJuly.otf');
+    src: url('./fonts/thisjuly/ThisJuly.ttf');
+}
+
 body {
   margin: 0;
   position: relative;
@@ -37,6 +43,10 @@ h1, h2, h4.dialog-work-title {
     font-family: 'Vantonir', 'Bartina';
     font-size: 1.8em;
     margin: 0;
+}
+
+.blue-color {
+    color: #5699e9;
 }
 
 p {

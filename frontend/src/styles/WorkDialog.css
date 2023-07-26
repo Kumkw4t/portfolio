@@ -34,7 +34,7 @@
 }
 
 .cross-modal:hover {
-	background-color: rgba(243, 246, 250, 0.06);
+	background-color: rgba(243, 246, 250, 0.1);
 }
 
 .cross-modal-svg {
@@ -126,6 +126,7 @@
 }
 
 .work-dialog-images-grid {
+	padding-bottom: 2em;
 	margin-top: 1em;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;

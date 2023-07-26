@@ -15,9 +15,9 @@ function Home () {
 		<Background>
 		<div className="home-global-container">
 		<div className="home-root-case">
-			<div className="home-portrait-container">
+		{/*	<div className="home-portrait-container">
 				<div className="portrait-image">Portrait</div>
-			</div>
+			</div>*/}
 			<div className="home-content-container">
 				{//<div className="home-title">}
 				}

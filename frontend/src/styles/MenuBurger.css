@@ -6,7 +6,6 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-/*	background-color: rgba(19, 10, 22, 1);*/ /* Light */
 	background-color: #f3f6fa;
 	display: flex;
 	justify-content: center;
@@ -26,19 +25,16 @@
 	height: 100%;
 }
 .burger-svg path {
-/*	stroke: rgba(255,255,255, 1);*/ /* Light */
 	stroke: #0e1012;
 	transition: d 0.4s;
 }
 
 .menu-open path:first-child {
 	d: path("M 20 40 L 50 10");
-/*	transition: d 1s;*/
 }
 
 .menu-open path:last-child {
 	d: path("M 20 10 L 50 40");
-/*	transition: d 1s;*/
 }
 
 .menu-open path:nth-child(2) {

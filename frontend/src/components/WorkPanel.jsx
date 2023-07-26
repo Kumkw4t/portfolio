@@ -74,7 +74,7 @@ function WorkPanel ( {workId, isEven}) {
 		<dialog id={`dialog${workId}`} className="work-dialog" close="true" onClick={closeModal}>
 			<div className="inside-dialog" onClick={(event) => (event.stopPropagation())} >
 			<div className="cross-modal" onClick={closeModal}>
-				<svg className="cross-modal-svg" width="70" height="50" viewBox="0 0 70 50">
+				<svg className="cross-modal-svg" width="70" height="70" viewBox="0 0 70 50">
 					<path d="M 20 40 L 50 10" stroke-width="5" stroke-linecap="round" />
 					<path d="M 20 10 L 50 40" stroke-width="5" stroke-linecap="round" />
 				</svg>
