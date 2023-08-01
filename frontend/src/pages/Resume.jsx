@@ -4,10 +4,12 @@ import ExperienceItem from '../components/ExperienceItem';
 import Background from '../components/Background';
 import workExp from '../data/experiences.json';
 import edList from '../data/education.json';
+import resume from '../data/CV_Mathilde_Ollivier_Web_Developper_2.pdf';
 
 import { useEffect } from 'react';
 
 function Resume () {
+
 	useEffect( () => {
 		const currentPage = document.getElementById("nav-resume");
 		const otherPages = [document.getElementById("nav-home"),document.getElementById("nav-works"),document.getElementById("nav-about")]
@@ -18,6 +20,9 @@ function Resume () {
 	return(
 		<Background>
 		<div className="resume-global-case">
+		<div className="button-resume clickable-link">
+			<a href={resume} download>Download PDF</a>
+		</div>
 		<div className="resume-root-case">
 			<div className="resume-column-left">
 			<div className="resume-case experience-case">

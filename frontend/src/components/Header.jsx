@@ -42,7 +42,7 @@ function Header () {
 				<Link to={`/resume`} className="nav-element" id="nav-resume"><p className="nav-text">Resume</p></Link>
 				<Link to={`/about`} className="nav-element" id="nav-about"><p className="nav-text">About</p></Link>
 			</nav>
-			<div className="nav-contact" onClick={handleContact}><p>Contact</p></div>
+			<div className="nav-contact clickable-link" onClick={handleContact}><p>Contact</p></div>
 			<div className={contact ? "email-clicked" : "email-clicked hidden"}>
 			<p className="email-text">email copied</p>
 			<svg viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
