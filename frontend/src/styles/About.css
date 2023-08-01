@@ -120,3 +120,19 @@
 		background-size: 100% auto;
 	}
 }
+
+@media screen and (max-width: 700px) {
+	.video-games:before, .manual:before {
+		background-size: auto 100%;
+	}
+}
+
+@media screen and (max-width: 530px) {
+	.illustration:before {
+		background-size: auto 100%;
+	}
+
+	.interest-case {
+		text-align: center;
+	}
+}
