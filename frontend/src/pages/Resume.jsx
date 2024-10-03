@@ -4,7 +4,7 @@ import ExperienceItem from '../components/ExperienceItem';
 import Background from '../components/Background';
 import workExp from '../data/experiences.json';
 import edList from '../data/education.json';
-import resume from '../data/CV_Mathilde_Ollivier_Web_Developper_2.pdf';
+import resume from '../data/MathildeOllivier_SoftwareEngineer.pdf';
 
 import { useEffect } from 'react';
 
@@ -42,6 +42,8 @@ function Resume () {
 					<SkillLine skillName="MERN Stack" skillValue="3" />
 					<SkillLine skillName="SQL" skillValue="3" />
 					<SkillLine skillName="C" skillValue="4" />
+					<SkillLine skillName="C++" skillValue="3" />
+					<SkillLine skillName="Python" skillValue="3" />
 					<SkillLine skillName="CyberSecurity" skillValue="4" />
 				</div>
 				<div className="soft-skills subskill-case">
@@ -59,7 +61,7 @@ function Resume () {
 						<h4 className="skill-name">Teamwork</h4>
 					</div>
 					<div className="skill-line">
-						<h4 className="skill-name">Agile development (Scrum, Kanban)</h4>
+						<h4 className="skill-name">Agile development (CI/CD, Jira, Git)</h4>
 					</div>
 				</div>
 				<div className="languages subskill-case">
