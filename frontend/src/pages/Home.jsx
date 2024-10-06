@@ -26,7 +26,7 @@ function Home () {
 				}
 				<div className="home-content-text">
 					<p>I'm <span className="home-highlighted-text">Mathilde Ollivier</span>,</p>
-					<p>a <span className="home-highlighted-text">web developer</span> looking for business opportunities</p>
+					<p>a <span className="home-highlighted-text">software developer</span> looking for business opportunities</p>
 				</div>
 			</div>
 		</div>
