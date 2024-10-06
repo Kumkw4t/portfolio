@@ -18,8 +18,8 @@ function About () {
 			<h1>About Me</h1>
 			<div className="about-description">
 			<p>I've been in cybersecurity for a few years after getting my diploma in 2017 from the french engineering school CentraleSupélec.
-			However I chose to move field to web development because I love learning new things and challenge myself.
-			Creative web development nourish my love for graphic design and offers numerous opportunities to create innovative things.
+			However I chose to move field to software development because I love learning new things and challenge myself.
+			Programming nourishes my love for solving analytical problems and offers numerous opportunities to create innovative and smart projects.
 			I hope over the years I'll be able to work on plenty amazing projects. Let's start together !</p>
 			</div>
 			<InterestBox />
