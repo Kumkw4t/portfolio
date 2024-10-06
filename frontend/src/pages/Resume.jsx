@@ -36,14 +36,12 @@ function Resume () {
 				<h2>Skills</h2>
 				<div className="hard-skills subskill-case">
 					<h3 className="blue-color">Hard Skills</h3>
-					<SkillLine skillName="CSS/SCSS" skillValue="4" />
-					<SkillLine skillName="HTML" skillValue="4" />
-					<SkillLine skillName="JS" skillValue="3" />
-					<SkillLine skillName="MERN Stack" skillValue="3" />
-					<SkillLine skillName="SQL" skillValue="3" />
+					<SkillLine skillName="C++" skillValue="4" />
 					<SkillLine skillName="C" skillValue="4" />
-					<SkillLine skillName="C++" skillValue="3" />
 					<SkillLine skillName="Python" skillValue="3" />
+					<SkillLine skillName="JS" skillValue="3" />
+					<SkillLine skillName="CSS/HTML" skillValue="4" />
+					<SkillLine skillName="SQL" skillValue="3" />
 					<SkillLine skillName="CyberSecurity" skillValue="4" />
 				</div>
 				<div className="soft-skills subskill-case">
